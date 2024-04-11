@@ -1,0 +1,23 @@
+Weapons
+#Melee
+Weapon01 Default Sword
+Melee Type H
+Damage 38-45
+Reload Time 2
+Special: AoE
+
+Weapon02 Maul
+Melee Type H
+Damage 65-80
+Reload Time 2
+Special: AoE and KB
+Requires Perk Damage 2
+
+Weapon03 Sol Hammer
+Melee Type H
+Damage 100-140
+Reload Time 2
+Special: AoE (Type Sun) and KB
+Requires Perk Damage lvl5
+
+#Ranged

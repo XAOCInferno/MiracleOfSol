@@ -1,0 +1,51 @@
+Weapons
+#Melee
+Weapon01 Default Sword
+Melee Type B
+Damage 45-60
+Reload Time 1
+
+Weapon02 Sword of Fire
+Melee Type D
+Damage 65-80
+Reload Time 1
+Special Mod: HP Degen of 5DP/s over 8s (stacks)
+Requires Perk Damage 2
+
+Weapon03 Staff of Greater Sorcerery
+Melee Type H
+Damage 80-92
+Reload Time 1.5
+Requires Perk Damage lvl5
+
+#Ranged
+Weapon01 Pistol
+Ranged Type B
+Accuracy 0.5
+Accuracy Reduction on Move 0.2
+Damage 22-36
+Burst Duration 5
+Burst Count 5
+Reload Time 4
+Range 40
+
+Weapon02 Darkfire Pistol
+Ranged Type D
+Accuracy 0.8
+Accuracy Reduction on Move 0.4
+Damage 38-55
+Burst Duration 8
+Burst Count 4
+Reload Time 4
+Range 40
+
+#Ranged
+Weapon01 Staff of Greater Sorcery
+Ranged Type H
+Accuracy 1
+Accuracy Reduction on Move 1
+Damage 35-48
+Burst Duration 2
+Burst Count 1
+Reload Time 0
+Range 50

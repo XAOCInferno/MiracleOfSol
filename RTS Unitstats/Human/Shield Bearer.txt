@@ -1,0 +1,21 @@
+#Unitstats
+
+
+Health: 400
+Regen: 1
+F.A:	100
+Armour	I.HM
+Squad Max:Min 4/4
+Build Cost = 240/0/0
+Reinforce Cost = 66.6/0/0
+Mark = Sun
+
+Abilities
+Ability01 Shield Barge / Drop shields
+Ability01 Charge to location knocking own and allied units and stunning them for 5s / Place shields in ground, provides Perfect cover to units behind it and gives the bearers pistols. Squad gains melee charge while without shield
+Ability01 Alt, disables this ability until you pick the shields back up
+
+Ability02 (passive) requires shields. 50% damage reduction from units shooting in front but recieve 25% more from flanking attacks 
+Ability02 Provide light cover to units behind them  
+
+Weapons

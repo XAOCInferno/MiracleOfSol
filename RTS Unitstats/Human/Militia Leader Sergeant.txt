@@ -1,0 +1,17 @@
+#Unitstats
+
+
+Health: 100
+Regen: 0.25
+F.A:	10
+Armour	I.M
+Squad Max:Min 12/12
+Build Cost = 190/0/0
+Reinforce Cost = 8/0/0
+
+Abilities
+Ability01 Execute 
+Ability01 Kill 1 model in the squad, restores morale and breaks retreat
+
+
+Weapons

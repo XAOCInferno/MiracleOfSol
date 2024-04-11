@@ -1,0 +1,69 @@
+#Unitstats
+
+
+Health: 250
+Regen: 1
+F.A:	60
+Armour	I.HM
+Squad Max:Min 3/3
+Build Cost = 210/25/0
+Reinforce Cost = 66/6/0
+
+Longer they are set up more damage they deal?
+
+Weapons
+#Melee
+Weapon01 Default Knife
+Melee Type B
+Damage 25-32
+Reload Time 1
+
+#Ranged
+Weapon01 Strangle Blaster
+Ranged Type A.S
+Accuracy 1
+Accuracy Reduction on Move 1
+AoE 10
+Damage 25/32
+Burst Duration 1
+Burst Count 1
+Reload Time 0
+Range 30
+Special Target speed and max speed is set to 40% for 1s (stacks)
+
+Weapon02 Strangle Cannon
+Ranged Type A.S
+Accuracy 1
+Accuracy Reduction on Move 1
+AoE 14
+Damage 200-350
+Setup Time 4
+Burst Duration 1
+Burst Count 1
+Reload Time 8
+Range 80
+Special Target speed and max speed is set to 40% for 8s
+
+Weapon03 Devastation Cannon
+Ranged Type B
+Accuracy 1
+Accuracy Reduction on Move 1
+AoE 4
+Damage 50/65
+Setup Time 4
+Burst Duration 6
+Burst Count 10
+Reload Time 4
+Range 60
+
+Weapon03 Devastation Beam
+Ranged Type AT
+Accuracy 1
+Accuracy Reduction on Move 1
+Damage 200-250
+Setup Time 4
+Burst Duration 1
+Burst Count 1
+Reload Time 6
+Range 80
+Special Target speed and max speed is set to 40% for 8s (can only target vehicles)

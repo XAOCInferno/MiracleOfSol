@@ -1,0 +1,36 @@
+#Unitstats
+
+
+Health: 400
+Regen: 2
+F.A:	0
+Armour: D.M
+Squad Max:Min 5/5
+Build Cost = 260/40/0
+Reinforce Cost = 50/5/0
+Mark = Demon
+
+Leaders
+Leader01 Master Herald (Requires T3)
+
+Abilities
+Ability01 (Passive) Fear Aura. Damages morale and lowers damage (only affects light infantry)
+
+Ability02 Read Dreams / Implant Nightmare 
+Ability02 Steal their targets vision / makes the target squad break
+
+
+Weapons
+#Melee
+Weapon01 Default Sword
+Melee Type H
+Damage 54-68
+Reload Time 0.75
+Special Snare, Units hit in melee move 40% slower for 3s 
+Special Heal, Heal +8 HP on melee hit
+Special Lifeleech, steal 2% of the targets max hp (can only target infantry)
+
+Good specials that work vs all infantry 
+
+#Ranged
+None

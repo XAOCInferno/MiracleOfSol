@@ -1,0 +1,35 @@
+#Unitstats
+
+
+Health: 295
+Regen: 2
+F.A:	0
+Armour: D.L
+Squad Max:Min 6/6
+Build Cost = 280/45/0
+Reinforce Cost = 30/6/0
+Mark = Demon
+Retreat Special: After 5s tunnel into the ground then teleport to destination 
+
+Leader
+Leader01 Master Hell Spawn (Requires T2)
+
+Abilities
+Ability01 (Passive) Fear Aura. Damages morale and lowers damage (only affects light infantry)
+Ability02 Burrow. Go under the ground for 10s, kb units who are hit when the units exit the burrow
+
+
+Weapons
+#Melee
+Weapon01 Default Sword
+Melee Type D
+Damage 28-35
+Reload Time 0.7
+Special Snare, Units hit in melee move 40% slower for 3s 
+Special Heal, Heal +4 HP on melee hit
+Special Lifeleech, steal 1% of the targets max hp (can only target infantry)
+
+Good specials that work vs light infantry 
+
+#Ranged
+None

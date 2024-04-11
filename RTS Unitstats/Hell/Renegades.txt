@@ -1,0 +1,63 @@
+#Unitstats
+
+
+Health: 280
+Regen: 1
+F.A:	30
+Armour	I.H
+Squad Max:Min 5/5
+Build Cost = 240/40/0
+Reinforce Cost = 32/5/0
+
+Weapons
+#Melee
+Weapon01 Default Knife
+Melee Type B
+Damage 20-30
+Reload Time 1
+
+Abilities
+Ability01 Shock Gun Ammo Swap 
+Ability01 Swaps between shock guns and modified shock gun 
+
+Leaders
+Leader01 Demo Exper
+Leader02 Close Combat
+Leader03 Prophet (Requires T3)
+
+#Ranged
+Weapon01 Shock Gun
+Ranged Type B
+Accuracy 1
+Accuracy Reduction on Move 1
+AoE 2
+Damage 20/30
+Burst Duration 4
+Burst Count 4
+Reload Time 1
+Range 30
+Special Number of targets hit increases the AoE by +0.5 (max +6)
+
+Weapon02 Custom Grenade Launcher
+Ranged Type E
+Accuracy 1
+Accuracy Reduction on Move 1
+AoE 3
+Damage 40/50
+Burst Duration 1
+Burst Count 3
+Projectile Offset 0, 4, 4
+Reload Time 6
+Range 40
+
+Weapon03 Modified Shock Gun
+Ranged Type AT
+Accuracy 1
+Accuracy Reduction on Move 1
+AoE 2
+Damage 20/30
+Burst Duration 4
+Burst Count 8
+Reload Time 1
+Range 30
+Special Number of targets hit increases the AoE by +0.5 (max +6)

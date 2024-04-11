@@ -1,0 +1,23 @@
+#Unitstats
+
+
+Health: 100
+Regen: 0.25
+F.A:	10
+Armour	I.M
+Squad Max:Min 12/12
+Build Cost = 190/0/0
+Reinforce Cost = 8/0/0
+
+Abilities
+Ability01 (Passive) Organised Retreat 
+Ability01 Travel 50% faster when retreating
+
+Ability02 Build Palicade / Build Cover
+Ability02 Enemy units in range of palicade have speed reduced by 40% and can't melee charge / build heavy cover for these units
+Ability02 Costs resources
+
+Leaders
+Leader01 Sergeant 
+
+Weapons

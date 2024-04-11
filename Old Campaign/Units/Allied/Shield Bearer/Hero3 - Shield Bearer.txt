@@ -1,0 +1,45 @@
+#Unitstats
+
+
+Health: 2000
+Regen: 2
+F.A:	200
+Armour	H.H
+Starting Level 0
+Max Level 10
+XP: At each level +5% to all stats (applied as multiplier ontop of perks)
+Starting Ability: Starts with basic rampage that kb and damages enemies
+
+HP Perks - Each give 10% of STARTING HP and HP Regen
+Lvl1: Ability: Gives shield that reflects 200% of recieved damage onto enemies 
+Lvl2: On melee hit heal for 1% of max hp
+Lvl3: Ability: Battle Prayer, cannot move for 5s, then heal for full HP
+Lvl4: No Bonus
+Lvl5: Ability: Earthshaking Proclemation: All Enemies in area 80 are knocked down and stunned for 8s
+Lvl6+: Another bonus is applied (this is worth 2 perks)
+
+
+Dmg Perks - Each give 10% of STARTING DMG
+Lvl1: Ability: Form of merciless strike, AoE around him and large AoE in front
+Lvl2: Enables Melee Leap (like a charge)
+Lvl3: Ability: Crushing Blow, deal 400HP and F.A explosive damage to a target
+Lvl4: No Bonus
+Lvl5: Ability: DIVINE RETRIBUTION, stun the target for 8s, deal 1000 raw damage to it. Does an additional 200E damage in Aoe 10 around target with med kb force
+Lvl6+: Another bonus is applied (this is worth 2 perks)
+
+
+Support Perks - Each give 10% Energy and Energy Regen
+Lvl1: Ability: Demoralize, Enemies in radius 50 around hero have their dps reduced by 60%
+Lvl2: Ability: Preech, increase allied infantry dps by 40% in 50 AoE around priest for 30s
+Lvl3: Taunt improved to reduce enemy damage
+Lvl4: Ability: Spark of Sol: Enables Sol cover around the priest for 30s
+Lvl5: Ability: Shield Wall: Emit cover, priest slowed for 50%, cannot charge and cannot die, all allies recieve huge ranged resit bonuses if standing near him
+Lvl6+: Another bonus is applied (this is worth 2 perks)
+
+
+
+Weapons:
+
+Sword
+Maul (requires perk 2 dmg)
+Sun Hammer (requires perk 5 dmg)

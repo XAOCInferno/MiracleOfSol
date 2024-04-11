@@ -1,0 +1,40 @@
+#Unitstats
+
+
+Health: 280
+Regen: 1
+F.A:	30
+Armour	I.H
+Squad Max:Min 5/5
+Build Cost = 240/40/0
+Reinforce Cost = 32/5/0
+
+Weapons
+#Melee
+Weapon01 Default Knife
+Melee Type B
+Damage 20-30
+Reload Time 1
+
+Abilities
+Ability01 Unholy Protection
+Ability01 Squad takes 80% less damage for 15s
+
+Weapons
+#Melee
+Weapon01 Default Sword
+Melee Type B
+Damage 23-36
+Reload Time 1.5
+Modifier01: (target) HP Degen of 4 for 8s (does not stack)
+
+#Ranged
+Weapon01 Basic Pistol
+Ranged Type B
+Accuracy 0.6
+Accuracy Reduction on Move 0.4
+Damage 3-5
+Burst Duration 4
+Burst Count 8
+Reload Time 4
+Range 10

@@ -1,0 +1,18 @@
+#Unitstats
+
+
+Health: 400
+Regen: 1
+F.A:	100
+Armour	I.HM
+Squad Max:Min 4/4
+Build Cost = 240/0/0
+Reinforce Cost = 66.6/0/0
+
+Abilities
+Ability01 (passive) inspire units on kill
+
+Ability02 Divine Light / Divine Strike
+Ability02 Creates column of light which follows the squad and provides the bonuses, clears darkness / Every entity instantly do a powerful special attack
+
+Weapons

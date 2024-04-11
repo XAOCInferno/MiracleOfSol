@@ -1,0 +1,11 @@
+Starting Squads:
+Champion, Demolition, Sorcerer, Heavy Weapons
+
+Purpose:
+ - Allow player to have fun with all they've learned by killing lots of weaker enemies and some tanks
+ - Levels heros for final mission
+
+
+Gameplay:
+ - If sorc has the level 3 energy tree perk he will be able to teleport the party over gaps
+ - Otherwise Champion has to jump to locations to open the gate

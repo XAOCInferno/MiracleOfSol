@@ -1,0 +1,31 @@
+#Unitstats
+
+
+Health: 2000
+Regen: 10
+F.A:	0
+Armour: D.H
+Squad Max:Min 1/1
+Build Cost = 400/400/0
+Reinforce Cost = n/a
+Mark = Demon
+
+Abilities
+Ability01 Massive Stomp / Crushing stomp
+Ability01 Units around the master are knocked with heavy force and take 35/45 H damage / stun units around the master
+
+Ability02 Consume Allies / Consume Enemies
+Ability02 Life Leech 4HP/s from allies / enemies 
+
+Weapons
+#Melee
+Weapon01 Default Sword
+Melee Type H
+Damage 200/220
+Reload Time 2
+Special Snare, Units hit in melee move 40% slower for 3s 
+Special Heal, Heal +16 HP on melee hit
+Special Lifeleech, steal 4% of the targets max hp (can only target infantry)
+
+#Ranged
+None

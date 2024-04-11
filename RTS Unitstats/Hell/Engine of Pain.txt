@@ -1,0 +1,40 @@
+#Unitstats
+
+
+Health: 600
+Regen: 0
+F.A:	400
+Armour	V.M
+Squad Max:Min 1/1
+Build Cost = 180/220/0
+Reinforce Cost = n/a
+
+
+Abilies
+Ability01 Blood Rage
+Ability01 Take 80% less damage for 30s but you lose control of it 
+
+Weapons
+#Melee
+Weapon01 Right Fist
+Melee Type H
+Damage 80/120
+AoE 3
+Reload Time 2
+
+Weapon02 Left Fist
+Melee Type H
+Damage 70/90
+AoE 1
+Reload Time 3
+
+#Ranged
+Weapon01 Basic Machine Gun
+Ranged Type B
+Accuracy 0.4
+Accuracy Reduction on Move 0.2
+Damage 4-6
+Burst Duration 10
+Burst Count 40
+Reload Time 4
+Range 20

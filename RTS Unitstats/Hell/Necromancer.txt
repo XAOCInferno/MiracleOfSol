@@ -1,0 +1,66 @@
+#Unitstats
+
+
+Health: 1000
+Regen: 2
+F.A:	100
+Armour	C
+
+Abilities 
+Ability01 Cripple / Corruption
+Ability01 Target a squad, their damage is reduced by 50% and take constant morale damage (target all units but not IH.H and C) but the necromancer must chnanel it.
+Ability01Alt Target a single entity, Decrease their regen by 4* their base regen and target can't retreat. If they die during the ability summon temporary nightmare herald 
+
+Ability02 Hidden Veil / alt Hidden Veil
+Ability02 Target an allied unit and they are infiltrated for 30s / Infiltrate self for 30s
+
+Weapons
+#Melee
+Weapon01 Default Sword
+Melee Type Daemonic
+Damage 30-45
+Reload Time 1
+
+Weapon02 Sword of Rage
+Melee Type A.P
+Damage 25-35
+Reload time 0.5
+Modifier01: (target) HP Degen of 4 for 8s (does not stack)
+
+Weapon03 Staff of Plague
+Melee Type B
+Damage 30-40
+Reload Time 1
+Modifier01: (target) HP Degen of 0.5 for 20s (stacks)
+
+
+#Ranged
+Weapon01 Basic Pistol
+Ranged Type B
+Accuracy 0.8
+Accuracy Reduction on Move 0.4
+Damage 20-30
+Burst Duration 4
+Burst Count 8
+Reload Time 4
+Range 40
+
+Weapon02 Energy Pistol
+Ranged Type H
+Accuracy 0.8
+Accuracy Reduction on Move 0.4
+Damage 35-45
+Burst Duration 6
+Burst Count 6
+Reload Time 4
+Range 40
+
+Weapon03 Staff of Plague (r)
+Ranged Type B
+Accuracy 1
+Accuracy Reduction on Move 1
+Damage 55-75
+Burst Duration 1 
+Burst Count 1
+Reload Time 0
+Range 55

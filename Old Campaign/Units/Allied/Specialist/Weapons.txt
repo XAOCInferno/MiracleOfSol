@@ -1,0 +1,90 @@
+Weapons
+#Melee
+Weapon01 Default Knife
+Melee Type B
+Damage 25-32
+Reload Time 1
+
+Weapon02 Improved Knife
+Melee Type B
+Damage 35-50
+Reload Time 1
+Requires Perk Damage 5
+
+#Ranged
+Weapon01 Machine Gun
+Ranged Type B
+Accuracy 0.5
+Accuracy Reduction on Move 1
+Damage 8 - 12
+Damage Scaling Curve \
+Setup Time 4
+Burst Duration 6
+Burst Count 24
+Reload Time 3
+Range 60
+
+Weapon02 (alt to 01) Rocket Launcher
+Ranged Type AT
+Accuracy 1
+Accuracy Reduction on Move 1
+AoE 8
+Damage 200-250
+Setup Time 1
+Burst Duration 1
+Burst Count 1
+Reload Time 6
+Range 60
+Special Target speed and max speed is set to 40% for 8s (can only target vehicles)
+Special low kb force
+
+Weapon03 Autocannon
+Ranged Type H
+Accuracy 0.6
+Accuracy Reduction on Move 1
+AoE 4
+Damage 35-42
+Damage Scaling Curve \
+Setup Time 4
+Burst Duration 6
+Burst Count 10
+Reload Time 4
+Range 60
+
+Weapon04 (alt to 02) Laser Beam
+Ranged Type AT
+Accuracy 1
+Accuracy Reduction on Move 1
+Damage 400-550
+Setup Time 4
+Burst Duration 1
+Burst Count 1
+Reload Time 8
+Range 80
+Special Target speed and max speed is set to 40% for 8s (can only target vehicles)
+
+Weapon03 Sol Cannon
+Ranged Type Sun
+Accuracy 0.8
+Accuracy Reduction on Move 1
+AoE 4
+Damage 25-60
+Damage Scaling Curve \
+Setup Time 4
+Burst Duration 6
+Burst Count 10
+Reload Time 4
+Range 60
+
+Weapon06 (alt to 03) Sol Beam
+Ranged Type Sun_AT
+Accuracy 1
+Accuracy Reduction on Move 1
+Damage 400-550
+Setup Time 4
+Burst Duration 1
+Burst Count 1
+Reload Time 8
+Range 80
+Special Target speed and max speed is set to 40% for 8s (can only target vehicles)
+Special Health Degen of 18HP/s for 6s

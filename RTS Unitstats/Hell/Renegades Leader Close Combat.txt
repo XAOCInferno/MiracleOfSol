@@ -1,0 +1,33 @@
+#Unitstats
+
+
+Health: 280 (die last)
+Regen: 1
+F.A:	30
+Armour	I.H
+Squad Max:Min 7/7
+Build Cost = 240/40/0
+Reinforce Cost = 32/5/0
+
+Weapons
+#Melee
+Weapon01 Default Sword
+Melee Type B
+Damage 40-60
+Reload Time 1
+
+Abilities
+Ability01 Shotgun Blast / Crippling Shot
+Ability01 20/30 E damage and large knockback then after cannot fire for 3s / Fire 4x as fast, for the next 3 shots guaranteed critical hit, and units hit get debuffed speed then after cannot fire for 5s
+
+#Ranged
+Weapon01 Shotgun
+Ranged Type B
+Accuracy 0.8 
+Accuracy Reduction on Move 0.5
+AoE 2
+Damage 20/30 (decrease with range to damage)
+Burst Duration 4
+Burst Count 4
+Reload Time 1
+Range 30

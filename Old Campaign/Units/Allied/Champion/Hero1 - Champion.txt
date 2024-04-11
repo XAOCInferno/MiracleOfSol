@@ -1,0 +1,45 @@
+#Unitstats
+
+
+Health: 1000
+Regen: 1
+F.A:	100
+Armour	C
+Starting Level 0
+Max Level 10
+XP: At each level +5% to all stats (applied as multiplier ontop of perks)
+Starting Ability: Frag Grenade
+
+HP Perks - Each give 10% of STARTING HP and HP Regen
+Lvl1: Ability: Instantly heal 100% HP to target unit and some FA, alt removes target FA and applies 10HP/s hp degen for 8s - INGAME
+Lvl2: Jetpack Heal allies for 100 HP on land
+Lvl3: Place beacon, units around it have +20HP/s and +5F.A/s regen, alt does reverse and affect enemy. Beacon dies after 30s/15s - INGAME
+Lvl4: No Bonus
+Lvl5: Ability: Holy Vile, any allies caught by the initial blast have HP regen increased by 100HP/s and FA by 20F.A/s, Enemies suffer 60HP/s for 10s, demons take 4x damage
+Lvl6+: Another bonus is applied (this is worth 2 perks)
+
+
+Dmg Perks - Each give 10% of STARTING DMG
+Lvl1: Ability: Explosive shot - INGAME
+Lvl2: Jetpack deals knockback and damage on landing
+Lvl3: Ability: Gives wrist mounted flamer that can burn the floor, improves the frag - INGAME (not frag)
+Lvl4: No Bonus
+Lvl5: Ability: Rapid fire, halves reload rate, sets recharge time of other dmg perks to 10% so they are spammable
+Lvl6+: Another bonus is applied (this is worth 2 perks)
+
+
+Support Perks - Each give 10% Energy and Energy Regen
+Lvl1: Ability: Off Map mortar, bring down a knockback shell, alt does no kb but DoT
+Lvl2: Ability: Aura of Speed: AoE 40% max speed boost, alt slows enemies
+Lvl3: Improved off-map mortar to 3 shells rather than 1
+Lvl4: Ability: Reduces all allied ability regen time to 33%
+Lvl5: Ability: Sunbeam, Launches controllable beam of light that burns enemies for a lot of dmg on hit, stuns demons, projects light cover in large AoE around it
+Lvl6+: Another bonus is applied (this is worth 2 perks)
+
+
+
+Weapons:
+
+Dual Pistol
+Dual Shotguns (requires perk 2 dmg)
+Shoulder Mounted Sun Turrets (requires perk 5 dmg)

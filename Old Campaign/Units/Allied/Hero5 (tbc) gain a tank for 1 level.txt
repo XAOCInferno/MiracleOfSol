@@ -1,0 +1,42 @@
+#Unitstats
+
+
+Health: 400
+Regen: 1
+F.A:	100
+Armour	C
+
+Abilities
+
+Weapons
+#Melee
+Weapon01 Default Knife
+Melee Type B
+Damage 25-32
+Reload Time 1
+
+Weapon02 Sword
+Melee Type H
+Damage 45-60
+Reload Time 1
+
+#Ranged
+Weapon01 Basic Pistol
+Ranged Type B
+Accuracy 0.8
+Accuracy Reduction on Move 0.4
+Damage 30/40
+Burst Duration 5
+Burst Count 5
+Reload Time 4
+Range 40
+
+Weapon01 Energy Gun
+Ranged Type H
+Accuracy 1
+Accuracy Reduction on Move 0.6
+Damage 50/70
+Burst Duration 4
+Burst Count 4
+Reload Time 4
+Range 40

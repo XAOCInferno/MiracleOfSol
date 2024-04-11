@@ -1,0 +1,58 @@
+#Unitstats
+
+
+Health: 400
+Regen: 1
+F.A:	100
+Armour	I.HM
+Squad Max:Min 4/4
+Build Cost = 240/0/0
+Reinforce Cost = 66.6/0/0
+
+Abilities
+Ability01 Glorious Carnage Scaling 0-100%
+Ability01 0-20% Max Speed, 0-15% Damage 0-30% Damage resist
+Ability01 At reaching enough score the bonuses are doubled for 15s and then reset to 0
+Ability01 Charges from killing enemies and allies dying nearby
+Ability01 After the special props, charging cannot be done for 20s
+
+Ability02 Frag Grenade / Alt Shrapnelgrenade
+Ability02 Does 30-45 E damage and low kb force / Does 60/85 B Damage but does not kb
+
+Ability03 Possess Weapon / Alt Possess Weapon (Requires T2)
+Ability03 For 30s Champion weapon gets replaces by Nightmare Herald Sword and has higher chance to do specials
+Ability03Alt Replace his ranged weapon to an advanced possessed bolter which fires faster and does demonic piercing 
+Ability03 For duration squad HP Regen is set to -4 and his regen is set to -8
+
+Weapons
+#Melee
+Weapon01 Default Knife
+Melee Type B
+Damage 25-32
+Reload Time 1
+
+Weapon02 Sword
+Melee Type H
+Damage 45-60
+Reload Time 1
+
+#Ranged
+Weapon01 Basic Pistol
+Ranged Type B
+Accuracy 0.8
+Accuracy Reduction on Move 0.4
+Damage 30/40
+Burst Duration 5
+Burst Count 5
+Reload Time 4
+Range 40
+
+Weapon01 Energy Gun
+Ranged Type H
+Accuracy 1
+Accuracy Reduction on Move 0.6
+Damage 50/70
+Burst Duration 4
+Burst Count 4
+Reload Time 4
+Range 40

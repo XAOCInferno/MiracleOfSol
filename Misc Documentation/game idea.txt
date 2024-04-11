@@ -1,0 +1,406 @@
+Story -
+After 1000 years of stagnation and decay, Earth is on the verge of collapse. The planet itself is saturated and barren, soon it will no longer be capable of supporting life.
+There is still a chance for mankind, however. 600 years before the start of the game, the leadership of Earth (Plannetary Administration) began a large project of exploration.
+Each exploration team consisted of 3000 humans, and the cloning technology required to create more life. They were sent to potentially inhabitable planets in the hope that one group would settle a colony there.
+Eventually, one team managed to secure and colonise 20% of a planet, with expectations to soon have mankind covering the whole surface.
+Desperately, the leaders of Earth announced the Great Exodus, with mankind as a whole shipping out in a great fleet to reach this new planet. The planet was officially named Hope.
+Humanity was placed in stasis aboard these vessels, a one trip journey to Hope. There was no option of turning back.
+It was then that the Daemons came from the land and a desperate battle for survival began, either the colonisers will be able to defeat the horde of evil, or humanity would come, unaware, and be consumed by it.
+
+
+Story Design:
+
+Campaign Intro:
+"Boardroom" meeting between the highest ranking members of the Plannetary Administration within a high tech room. There is an archway at the far end of the room leading onto a balcony high in the sky.
+At the opposite side of the room, at the head of the table sits the Administrator, they are clothed completely in a black robe with only a single metal claw laying on the table.
+Sitting near the centre of the table is a human wearing religous garments and holding a large staff. He is the High Minister for Religion, or The Voice. He speaks for the Administrator to the public.
+The mood of the meeting is desperate and there is sometimes a deep rumbling that shakes the building. The group have clearly been arguing for hours, if not days and are extreemly agitated.
+
+The High Minister for Teraforming speaks first, they are a tall and thin man dressed in military uniform, like most of the group.
+
+Teraforming:
+Do you not see this is folly? The Administrator has not spoken in decades! Why would he speak to us now?
+
+He is shouted down by the High Minister for Manufactory
+
+Manufactory:
+The Administrator calculates everything! He knows everything, do not speak ill against him. If it is time for him to speak, than he will.
+
+The Voice: 
+...and if it is not time, His holy voice will guide us implicitly!
+
+The Voice stands up, as if giving a speech to rally a population.
+
+The Voice: 
+The Administrator speaks to all of us right now! He is connected to the world around us and controls it! We live in His glory, like the reveared Gods of old days. Loe, we have created God on Earth!
+
+A bearded man in the most impressive looking military uniform, covered in medals speaks out. He is the High Minister of the Military.
+
+Millitary:
+Silence Minister! We don't need your lecture here. The logistics are ready, the transport ships have been made under the guidance of the Minister for Manufactory, and my men are ready to escort the population. We have no destination, but we must act now. There is no more time.
+
+Teraforming:
+We cannot leave without a destination, once we are placed in suspended animation there will be no one left to calculate our course. We will be sending the whole population of Earth blindly into space! 
+
+Military:
+I suppose you want to stay here, as Earth crumbles before us! At least then you can keep your job! You know there's no use for you outside this hellhole!
+
+Teraforming:
+How dare you! I know only the interests of the people of Earth!
+
+Military:
+Enough! If we cannot agree, I will send the army out now to begin the Exodus!
+
+The Voice: 
+You cannot! We have not had the holy order from The Administrator! I will not send fourth the people without His command, and without my support the people will not obey! It will be civil war on the bloodiest scale!
+
+Military: 
+The people will obey my command once the army reveals itself, we are mighty!
+
+Manufactory: 
+I will not allow such bloodshed, I will stall the ships remotely until we have a concensus!
+
+Teraforming:
+...and we cannot leave without a destination! We should stay on Earth and continue to try and salvage it!
+
+Military: 
+We cannot stay here, The Administrator himself stated that the chances of survival are....
+
+The Minister for military trails off as the meeting breaks down into louder arguing. Slowly one of The Administrator's clawed fingers moves to a button and presses it. 
+A hologram lights up in the middle of the table of an Earth-Like planet, and the ministers are suddenly silenced, they sit back down and look to the Administrator in shock.
+The Administrator speaks in a heavily robotic voice, barely human. It is unclear if it is, or ever was human. The robes cover every feature except for its hand.
+
+Administrator: 
+... Hope.
+
+
+
+Main Mechanics:
+
+1) Resources: To build units you need resources. The main resource is used for everything and is generated by the HQ and capture points. The secondary resource is harder to obtain and is used for specialised units and tanks.
+
+2) Standard cover: units in cover take less damage from ranged attacks
+
+3) Brightness cover: daemons gain combat bonuses in dark areas, and humans gain bonuses in light areas. Some abilities will interact with these specific cover types
+
+4) Capture Points:
+Capturing locations on the map will increase resource generation, this encourages aggressive play to gain map control.
+
+5) Strategic Locations:
+Special capture points, these will give a unique Strategic Resource used to call down powerful global abilities. Controlling all strategic points for a certain ammount of time is also an alternative win condition.
+
+6) Global Abilities:
+Abilities that are casted globally, these are unique to each faction and provide specialised benefits. They cost Strategic Resource to cast.
+
+7) Death Resource:
+When you kill an enemy unit, you are returned a very small ammount of the build cost of that 1 entity. When killing a whole squad you are given a bonus based on the original build cost of the squad as well.
+
+8) Veterancy:
+To encourage the player not to lose their army, squads will gain veterancy over time, providing small bonuses to the squad to improve them over their unleveled counterparts.
+
+9) Abilities:
+This is the unique factor of the game. Every unit will have at least 1 ability. Abilities can do a variety of things, improve stats, cause explosions, debuff enemies, move squads etc. Microing these abilities is key.
+
+9.5) Alternative Abilities:
+Holding shift allows you to use an alternative version of certain abilities, these do other things but still keep the core part of the ability 
+
+10) Improvements / Gear: Certain units, especially hero units, will be able to be improved by purchasing gear on the squad. This may improve stats or provide new abilities
+
+11) Morale: 
+most units have morale, when morale is low they become suppressed
+
+12) Suppression: Removed?
+all weapons deal small morale damage, some weapons do high morale damage, when morale is low certain units become suppressed which means they more slower and shoot less often
+
+13) Armour Flanking: 
+certain units will take more damage when hit from behind, mainly battle tanks but some infantry too
+
+14) Flanking: 
+when surrounded, units will feel flanked, while flanked they become suppressed, if flanked for a certain ammount of time they can become panicked or enraged
+
+15) Panic: 
+If a flank isn't broken, and the flanked unit continues being attacked they may panic, making you lose control of the squad and making them retreat to the HQ
+
+16) Enraged: 
+Certain units become Enranged instead of panicked, these units will charge forward and seek to engage the enemy in melee
+
+17) Tactical Withdrawl: 
+global ability for most units, they gain a large ammount of speed and move to a designated area, you lose control of them and they take slightly more damage and cannot fight
+
+18) Full Retreat: 
+lose control of the unit and they retreat to the HQ, this will also hurt the morale of nearby units who may become panicked 
+
+19) Rest:
+When not selected and not controlled, units will rest. For humans, rest will increase their health regen. For daemons, they will wander the map looking for corpses to feed on to increase HP regen.
+
+20) Ambush:
+Stealthy units may ambush resting units, this will cause morale damage and the resting units will have to take time to requip their weapons and exit the resting state.
+
+21) Jumping / Teleporting: 
+Certain units and abilities allow troops to rapidly move to a new location. Teleportation instantly moves them while jumping moves them over a short time (flight). This allows to bypass terrain too.
+
+22) Ranged Combat:
+Shooting within certain ranges for each weapon. Weapons fire at different rates and have accuracy (chance to miss). 
+
+23) Melee Combat:
+Units in close proximity set to a melee stance can engage in melee. When units are engaged in melee they cannot shoot.
+
+24) Melee Charge:
+Certain units will move faster when set to melee stance and within a certain range of an enemy.
+
+25) Critical Hit:
+Ranged and melee attacks have a chance to do bonus damage, certain weapons have higher and lower chances. The ammount of CURRENT armour the unit has will reduce the impact of a crit. Abilities cannot crit
+
+26) Grazing Hit:
+Ranged and melee attacks have a chance to do reduced damage, certain weapons have higher and lower chances. Abilities cannot graze
+
+27) Accuracy reduction when moving:
+Moving units that shoot have a penalty on their accuracy, as well as this the chance for a grazing hit is increased.
+
+28) Armour Types:
+Each Unit has an armour type, weapon damage is defined differently for different armours.
+
+29) Fortified Armour:
+An extra health bar given to some units, mainly tanks and heavy infantry. Health cannot usually be damaged while the unit has F.A.
+
+
+Armour Types:
+Infantry Low (Specialized Units [eg: Sniper])
+Infantry Med (Swarm Units)
+Infantry High (Basic Armoured Units)
+
+Infantry Heavy Med (Mid-Game armoured units)
+Infantry Heavy High (Late-Game armoured units)
+
+Commander
+
+Daemon Low (Basic Daemon Units)
+Daemon Med (Heavy Daemon Units)
+Daemon High (T4 daemon unit)
+
+Vehicle Low (Light Walkers, Transports [TBC])
+Vehicle Med (Heavy Walkers, Tanks)
+Vehicle High (T4 human unit)
+
+Building Low (Turrets)
+Building High (HQ)
+
+
+Damage Types:
+Note: All Melee Attacks will deal some damage through F.A, half of the F.A piercing.
+
+0 - Basic [B]: 		     To F.A = 20%,  To Armour = I(100,100,100);  C(50);   I.H(50,20);    D(100,50,20);   V(20,5,1);       B(50,5);   //Standard Weapon, Basic Melee
+1 - Armour Shredding [A.S]:  To F.A = 80%,  To Armour = I(100,100,100);  C(50);   I.H(50,20);    D(100,50,20);   V(50,20,10);     B(100,10); //Specialised Weapon, some Heavy Melee or Ability, Soft AV
+2 - Armour Piercing [A.P]:   To F.A = 20%,  To Armour = I(50,50,50);     C(50);   I.H(50,20);    D(50,50,20);    V(1,1,1);        B(50,5);   //Poison, Flame, or Ability |SPECIAL Ignores F.A|  
+3 - Daemonic [D]:	     To F.A = 50%,  To Armour = I(200,200,200);  C(100);  I.H(100,40);   D(100,50,20);   V(40,10,5);      B(100,10); //Weaker Daemon Weapon, anti-I.L
+4 - Heavy [H]: 		     To F.A = 50%,  To Armour = I(200,200,200);  C(100);  I.H(200,100);  D(100,100,100); V(60,40,20);     B(200,15); //Energy Weapon, Daemon Weapon, Super Heavy Melee
+5 - Anti-Tank [AV]:	     To F.A = 100%, To Armour = I(10,10,10);     C(10);   I.H(20,50);    D(10,10,200);    V(100,200,200); B(200,30); //Pure AV Weapon
+6 - Explosive [E]:	     To F.A = 200%, To Armour = I(50,50,50);     C(20);   I.H(50,50);    D(50,50,20);    V(50,20,20);     B(50,5);  //Most AoE
+7 - Biological [Bio]:	     To F.A = 10%,  To Armour = I(200,200,200);  C(50);   I.H(100,20);   D(50,20,10);    V(5,2,1);        B(20,2);   //Special Ammo, niche unit, daemons are resistant
+
+
+
+Resource Generation:
+Fields around map, cap point generate res slowly from field. Add node to point to prevent decap then pay for bonus haravesters to mine the field for much more money
+Harvesters can be destroyed or the node can be captured by enemy to turn the harvesters to your side.
+
+
+Looting:
+Enemy units can be looted for money and chance to drop an item.
+
+
+Legion of Hell
+
+Hero - Necromancer: 
+ - Description: In human form, but completely covered in demonic armour, no one knows what truly writhes within. This creature is a great mockery of mankind.
+
+ - HP: 675 [Improved with Wargear]
+ - F.A: 40 [Improved with Wargear]
+ - Armour: Commander
+
+ - Melee: B [Improved to D, A.P or H Wargear]
+ - Melee Special: None [Improved to Higher crit chance, DoT or Zombify Enemy on Kill]
+
+ - Ranged: B [Improved to H with Wargear]
+
+ - Morale: N/A
+ - Abilities: Many, affected by wargear [TBC]
+ - Leveling System: Hero
+
+
+T1 - 
+Legionnaire of Hell: Heavy ranged squad
+ - Description: Slow and bulky, heavily armoured and terrifying. These "men" are further mockeries of the human form, standing far taller than the average human and far physically stronger.
+
+ - HP: 300
+ - F.A: 40 
+ - Armour: I.H
+
+ - Melee: A.S
+ - Ranged: B
+
+ - Morale: 400
+ - Abilities: [Passive - Requires Broken Morale] Enraged - Lose control, 30% damage resist, 20% speed boost, try to melee nearby units, morale regen boost
+ - Squad: 5/5
+ - Leader: Tier 2 Leader (Legionnaire Leader)
+ - Leveling System: Generic
+
+	Legionnaire Leader
+	 - HP: 500
+	 - F.A: 40 
+	 - Armour: I.HM
+
+	 - Melee: A.S
+	 - Ranged: B
+
+	 - Abilities: 33% HP Bonus to squad; [Active] Rally! Restores Morale; more? [TBC]
+
+Fanatics: Swarm melee specialists
+ - Description: These traitors have fully been consumed by Evil, they know only to serve Hell and embrace any fate given to them even unto death, armed with flaming swords and fast firing pistols
+
+ - HP: 80
+ - F.A: 0
+ - Armour: I.M
+
+ - Melee: A.P
+ - Melee Special: DoT
+ - Ranged: B
+
+ - Morale: 150
+ - Abilities: [Passive] Fury - 50% Damage Resist while charing; [Passive - Requires Broken Morale] Frenzy - Double Attack Rate; [Activated] Bloodletting - Speed Bonus, Break Morale;
+ - Squad: 14/14
+ - Leader: Tier 1 Leader (Prophet)
+ - Leveling System: Generic
+
+	Prophet
+	 - HP: 200
+	 - F.A: 20 
+	 - Armour: I.M
+
+	 - Melee: A.S
+	 - Ranged: B
+
+	 - Abilities: [Passive] 33% HP Bonus to squad; [Activated] Lesser Necromancy - Killed enemies return as zombies [TBC]
+
+Tormentors: Control ranged squad
+ - Description: Men of Hell, armed with powerful suppressive weaponry to force enemies to find cover.
+
+ - HP: 200
+ - F.A: 20 
+ - Armour: I.H
+
+ - Melee: B
+ - Ranged: A.S [Upgraded to AV or E]
+ - Ranged Special: Damage Increases with proximity to target for starting weapon, Increased Morale Damage
+
+ - Morale: 300
+ - Abilities: None? [TBC]
+ - Squad: 3/3
+ - Leveling System: Generic
+
+Hell Spawn: Light melee squad
+Description: The first daemons to come from the earth, the Hell Spawn rip enemies apart with brutal efficiency. 
+Stats: Small squad size, high melee damage and leech health on ever melee hit, no ranged attack, average hp, is a daemon
+ - HP: 260
+ - F.A: 0
+ - Armour: D L
+
+ - Melee: D
+ - Melee Special: Life-leech
+ - Ranged: N/A
+
+ - Morale: N/A
+ - Abilities: [Passive - Activated on Retreat] Tunnel - After a short duration go underground, in addition to normal retreat benefits: 50% more resistance from damage, 50% more speed
+ - Squad: 5/5
+ - Leveling System: Generic
+
+T2 -
+
+Renegades: Specialized demolition ranged squad
+Description: Traitors to mankind, these humans have turned to the service of Hell but maintain their sanity enough to be smart and effective combatants.
+Stats: Medium squad size, average melee damage, good ranged damage and do more damage the closer they are to the target, average HP, several explosive abilities
+
+Nightmare Heralds: Teleportation melee squad
+Description: Greater daemons of Hell, able to decimate anything in melee using their flaming weaponry.
+Stats: Small squad size, great melee damage, no ranged attack, average hp, melee charge and can teleport, is a daemon
+Leader: Can reinforce an Alpha Herald to increase their health
+
+Engine of Pain: Melee walker
+Description: Extremely well armoured and designed for carnage this dark machine can slaughter infantry with ease, or rip apart tanks with brute force.
+Stats: 1 unit, good melee damage with some splash damage, no ranged weaponry, good hp (vehicle)
+
+
+T3 -
+
+Decimator: Battle tank
+Description: Well armoured and bulky, high damage to all targets, slow and vulnerable to flanking
+Stats: 1 unit, no melee weaponry, high ranged damage, average HP (vehicle) and takes more damage from flank attacks
+
+The Divine Serpent, Avatar of Hell: Melee End-game unit
+Description: The greatest Daemon of Hell, this creature stands massive and unquestioned on the battlefield. The meer presence of this beast causes the sky to darken and the heavens to rain blood 
+Stats: 1 unit, insane melee damage with some splash, no ranged weapons, insane HP, cannot be flanked, cannot be suppressed, global debuffs to most enemy units
+
+
+Humans:
+
+Hero - Champion of Hope 
+Description: While the Administrator officially controls the planet, all follow the Champion. A mighty and prooven warrior, a veteran of a hundred years of bloodshed, he knows how to fight Hell, and he fears no Evil.
+Stats: Average melee dps, good ranged dps, average HP, can construct buildings, Immune to morale
+
+
+T1 -
+
+Militia: Swarm ranged squads
+Description: With little time to train new soldiers, humanity must clone its civilian populous to be able to continue fighting.
+Stats: Big squad size, Bad melee dps, average ranged dps, low hp, max squad size increases at each tier
+Leader: Can reinforce a Sergeant to increase their health
+
+Operative: Assassin sniper squad
+Description: An elite and experienced sniper, can efficiently pick off enemies from afar but is vulnerable to swarms.
+Stats: 1 model, Average melee dps, slow firing but great ranged dps, average HP, has a variety of support abilities.
+
+Shield Bearers: Tanky melee squad
+Description: Similar to riot police of old, these shield bearers hold the line while others faulter, while these soldiers are in combat you will take not one step back.
+Stats: Medium squad size, average melee dps and good chance to knockback units in melee, no ranged attack, good HP, take much less damage from the front but more damage if flanked, frontal defensive aura extends to squads standing behind them
+
+Crusaders: Heavy mixed-role ranged squad
+Description: Well trained and armoured, crusaders are usually found on the front-lines using their powerful ranged weapons to disrupt and slaughter the enemy. These soldiers have earn their place, and their name, by crusading deep into daemon territory as a trial to proove their worth.
+Stats: Tiny squad size, low melee damage while using ranged weapons, average hp, high ranged damage that gets higher the closer the target gets, starts with anti-infantry suppressive weaponry but can be upgraded with anti-vehicle weaponry or melee weaponry, teleports
+Leader: In t3 can reinforce a leader armed with a powerful melee weapon that is effective against all targets, also provides a melee resistance to the squad
+
+
+T2 -
+
+Veterans: Elite ranged squad
+Description: Serving far longer than most of humanity these veterans have seen the worst Hell can throw at them and still fight. They are armed with standard weaponry but can equip custom ammunition to counter all armour types
+Stats: Small squad size, average melee damage, average ranged damage, good hp, able to load specialised ammunition to increase their damage vs different armour types
+
+Immortals: Elite melee squad
+Description: Sacrificing speed for armour, their name is well deserved. Armed with powerful melee weaponry and shrug off standard weapon fire. 
+Stats: Tiny squad size, high melee damage, no ranged weaponry, great HP, melee weapons can be upgraded to be effective vs infantry or vehicles
+
+Escavator: Mixed-role Walker Vehicle
+Description: Lightly armoured compared to the Hellish equivallent, a repurposed tunneling walker for combat. Starts with a drill, fist Melee weapon and flamer. Can be upgraded to replace Drill with stronger ranged weapons.
+Stats: 1 unit, average melee damage with good splash damage, average to low hp (vehicle), excellent speed and melee charging
+
+
+T3 - 
+
+Battle tank: Battle tank
+Description: A repurpoused transport vehicle re-equiped for heavy weaponry. 
+Stats: 1 unit, no melee weaponry, good ranged weapons, average HP (vehicle), faster than the Decimator but weaker, can be upgraded with anti-vehicle weaponry, takes more damage from flank attacks
+
+Salvation Class Battle Tank: Ranged End-Game unit
+Description: The last resort, full to the brim of weapons.
+Stats: 1 unit, no melee weaponry, very-good mixed role ranged weapons, great HP (vehicle), very slow but does not take more damage from flanks
+
+btw i thought of a new unit i want for the hero faction
+bc it is so simple and a nice addition
+it's a light vehicle on t2
+it's just a giant fuck off crucifix on wheels
+it has a ranged attack where it powers up and shoots like a med dps beam
+it has an ability where u can charge it to do splash and kb
+it also has an ability where it like does kb around it and also stuns demons
+it provides the light cover wherever it moves and u can only have 1 of them
+however if it is destroyed it does huge debuffs to allied units for a time that are not heavy infantry, and makes the heavy infantry fight harder for a time like a "retribution" thing
+for hell if i have time i will add 1 more unit for them too that is a light tank so that humans don't have unfair advantage

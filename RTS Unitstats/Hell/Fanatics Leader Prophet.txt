@@ -1,0 +1,13 @@
+#Unitstats
+
+
+Health: 60 (die last leader)
+Regen: 0.25
+F.A:	10
+Armour	I.M
+Squad Max:Min 18/18
+Build Cost = 190/0/0
+Reinforce Cost = 8/0/0
+
+Abilities
+[3 abilities to sacrifice units to do stuff]

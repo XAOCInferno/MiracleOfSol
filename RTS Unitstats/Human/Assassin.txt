@@ -1,0 +1,23 @@
+#Unitstats
+
+
+Health: 145
+Regen: 1
+F.A:	10
+Armour	I.M
+Squad Max:Min 1/1
+Build Cost = 190/35
+Reinforce Cost = N/A
+Mark = Moon
+
+Abilities
+Ability01 Snipe / Explosive Round
+Ability01 Target 1 entity, deal high damage / Target 1 entity do kb to area around it
+
+Ability02 Call in artillery shell / Call in artillery barrage
+Ability02 after 6s fire a shell that does 120-200 E damage and high kb / after 8s fires in 6 shells that do 20-50 E damage and low kb force with high offset 
+
+Ability03 Call in gas shell / call in smoke shell
+Ability03 Does initial 20-30 E damage then Damages units that stand inside with bio damage / enemy units that are hit have sight range reduced by 80% and rage reduced by 40%, allied units take 40% less damage in the cloud
+
+Weapons

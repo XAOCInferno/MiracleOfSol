@@ -1,0 +1,45 @@
+#Unitstats
+
+
+Health: 800
+Regen: 1
+F.A:	80
+Armour	H.M
+Starting Level 4
+Max Level 10
+XP: At each level +5% to all stats (applied as multiplier ontop of perks)
+Starting Ability: Swap weapon from main to av and visa versa
+
+HP Perks - Each give 10% of STARTING HP and HP Regen
+Lvl1: Ability: Stim pack, restores 100hp, and HP regen increased by 400% for 16s
+Lvl2: While standing still takes 40% less damage from range
+Lvl3: Ability Lock armour, armour becomes V.H temporarily and immune to kb for duration, speed reduced by 40%
+Lvl4: No Bonus
+Lvl5: Ability: Stubborness, can't die for duration of ability but still lose hp, ends after 30s
+Lvl6+: Another bonus is applied (this is worth 2 perks)
+
+
+Dmg Perks - Each give 10% of STARTING DMG
+Lvl1: Ability: AV grenade, alt smoke grenade
+Lvl2: Improves accuracy of Main weapons, AV weapons now slow vehicles and greater daemons by 50% on hit
+Lvl3: Units hit by weapons take 40% more damage and move 20% slower (does not stack)
+Lvl4: No Bonus
+Lvl5: Ability: Focus Fire, Target area, if autocannon he does huge dps and kb in circle area, if las deals just massive dps in smaller area
+Lvl6+: Another bonus is applied (this is worth 2 perks)
+
+
+Support Perks - Each give 10% Energy and Energy Regen
+Lvl1: Ability: Sprint, speed increased by 40% for 15s
+Lvl2: Ability: Ammo stash, target allied unit they shoot 25% faster and don't reload, alt target self
+Lvl3: Improves enery regen by another 10%
+Lvl4: No longer needs to reload, Ability: stomps ground and units around him get stunned
+Lvl5: Ability: Damage reduced by 80%, units hit have max hp halved, and increase weapon cooldown by 4x
+Lvl6+: Another bonus is applied (this is worth 2 perks)
+
+
+
+Weapons:
+
+Machine Gun / Rocket Launcher
+Autocannon / Laser
+Sunbeam Autocannon / Sunbeam Laser

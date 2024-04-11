@@ -1,0 +1,51 @@
+Weapons
+#Melee
+Weapon01 Default Knife
+Melee Type B
+Damage 25-32
+Reload Time 1
+
+Weapon02 Improved Knife
+Melee Type B
+Damage 45-60
+Reload Time 1.5
+Requires Perk Damage 2
+
+Weapon03 Sol Knife
+Melee Type Sun
+Damage 45-60
+Reload Time 1.5
+Requires Perk Damage lvl5
+
+#Ranged
+Weapon01 Dual Pistol (has 2 of these)
+Ranged Type B
+Accuracy 0.5
+Accuracy Reduction on Move 0.2
+Damage 22-36
+Burst Duration 5
+Burst Count 5
+Reload Time 4
+Range 40
+
+Weapon02 Dual Shotguns (has 2 of these)
+Ranged Type E
+Accuracy 1
+Accuracy Reduction on Move 0
+AoE 5 (type = starting from entity)
+Damage 45-60 (decrease over range from entity)
+Burst Duration 8
+Burst Count 4
+Reload Time 3
+Range 35
+
+#Ranged
+Weapon01 Shoulder Mounted Sol Turrets (has 2 of these)
+Ranged Type Sun
+Accuracy 1
+Accuracy Reduction on Move 0
+Damage 25-40
+Burst Duration 1
+Burst Count 1
+Reload Time 2
+Range 30

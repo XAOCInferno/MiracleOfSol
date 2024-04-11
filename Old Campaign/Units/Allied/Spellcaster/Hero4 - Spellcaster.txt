@@ -1,0 +1,46 @@
+#Unitstats
+
+
+Health: 800
+Regen: 1
+F.A:	80
+Armour	H.M
+Starting Level 2
+Max Level 10
+XP: At each level +5% to all stats (applied as multiplier ontop of perks)
+Starting Ability: 'Doombolts'
+Starting Ability: Shadow Manipulation, target a shadow and make it either light cover or alt blood cover
+
+HP Perks - Each give 10% of STARTING HP and HP Regen
+Lvl1: Ability: Leech Soul, Target Enemy and drain 40Hp/s, gain HP regen of +20, alt Target Ally, drain 20HP/s, gain +40 HP regen 
+Lvl2: Bonuses of shadow cover doubled, +200 HP bonus
+Lvl3: Ability: Immune to damage for duration, ((((any change that happened to his health for past 15s is applied in reverse)))) TBC
+Lvl4: No Bonus
+Lvl5: Ability: Consume, target enemy it dies and gain 70% of his max health, if it goes over current health then apply as temporary max health
+Lvl6+: Another bonus is applied (this is worth 2 perks)
+
+
+Dmg Perks - Each give 10% of STARTING DMG
+Lvl1: Ability: Target an enemy squad and set it on fire, dealing lots of DoT, alt fireball does kb and large dmg
+Lvl2: Chance to do a reactive strike, dealing AoE and kb in area around him, leave trail of fire behind sorc that deals 5dmg every 0.5s to enemies
+Lvl3: Ability: Crippling Magic, target will take 600 Damage and be stunned, alt AV version, target takes 600AT and stunned 
+Lvl4: No Bonus
+Lvl5: Ability: Charge up ability for a few seconds, then stun and damage around sorc
+Lvl6+: Another bonus is applied (this is worth 2 perks)
+
+
+Support Perks - Each give 10% Energy and Energy Regen
+Lvl1: Gives him a teleport
+Lvl2: Ability: Time manipulation, switches time state (ie night or day), does not work during Necromancer fight
+Lvl3: Improves teleport to leave rifts open at leave and arrive so allies can enter and follow him
+Lvl4: Ability: Curse, target entity takes double damage from all sources, alt protection apply to self and reduce the damage received by halve
+Lvl5: Ability: Hysteria, make all enemies in area fight eachother. They will still fight player though
+Lvl6+: Another bonus is applied (this is worth 2 perks)
+
+
+
+Weapons:
+
+Sword & Pistol
+Sword of fire & Darkfire pistol (requires dmg perk 2)
+Two handed staff (requires dmg perk 5)

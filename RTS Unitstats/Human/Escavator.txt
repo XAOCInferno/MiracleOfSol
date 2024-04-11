@@ -1,0 +1,47 @@
+#Unitstats
+
+
+Health: 600
+Regen: 0
+F.A:	400
+Armour	V.M
+Squad Max:Min 1/1
+Build Cost = 180/220/0
+Reinforce Cost = n/a
+
+
+Abilies
+Ability01 Hook / Drill Stomp
+Ability01 Throw pincer forward, grab an entity and throw it back to himself / Hit ground with drill and knock enemies around it and create light cover
+
+Ability02 Drill for tunnel / Drill for resources (Requires 
+Ability02 Create a tunnel at location that units can enter / gain a random ammount of resources from 0-80 &, 0-40
+
+Ability03 Autocannon Barrage / Heavy Shot (requires autocannon range weapon)
+Ability03 Shoot at location doing constant Kb but low E dmg / Target 1 vehicle, stun it for 8s
+
+
+Weapons
+#Melee
+Weapon01 Right Fist
+Melee Type H
+Damage 80/120
+AoE 3
+Reload Time 2
+
+Weapon02 Left Fist
+Melee Type H
+Damage 70/90
+AoE 1
+Reload Time 3
+
+#Ranged
+Weapon01 Basic Machine Gun
+Ranged Type B
+Accuracy 0.4
+Accuracy Reduction on Move 0.2
+Damage 4-6
+Burst Duration 10
+Burst Count 40
+Reload Time 4
+Range 20

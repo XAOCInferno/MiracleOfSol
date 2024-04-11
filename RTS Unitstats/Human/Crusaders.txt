@@ -1,0 +1,13 @@
+#Unitstats
+
+
+Health: 250
+Regen: 1
+F.A:	80
+Armour	I.HM
+Squad Max:Min 3/3
+Build Cost = 210/25/0
+Reinforce Cost = 66/6/0
+Mark = Moon
+
+Weapons

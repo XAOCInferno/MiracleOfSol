@@ -1,0 +1,49 @@
+#Unitstats
+
+
+Health: 400
+Regen: 0
+F.A:	300
+Armour	V.M
+Squad Max:Min 1/1
+Build Cost = 200/250/0
+Reinforce Cost = n/a
+
+Abilities
+Ability01 Charge to location, dealing 40/60 B damage to units and knocking them away
+
+Weapons
+#Melee
+None
+
+#Ranged
+Weapon01 Left Machine Gun
+Ranged Type B
+Accuracy 0.4
+Accuracy Reduction on Move 0.2
+Damage 4-6
+Burst Duration 10
+Burst Count 40
+Reload Time 4
+Range 40
+
+Weapon02 Right Machine Gun
+Ranged Type B
+Accuracy 0.4
+Accuracy Reduction on Move 0.2
+Damage 4-6
+Burst Duration 10
+Burst Count 40
+Reload Time 4
+Range 40
+
+Weapon03 Basic Cannon
+Ranged Type AT
+Accuracy 1
+Accuracy Reduction on Move 0
+Damage 100-120
+Burst Duration 10
+Burst Count 40
+Reload Time 6
+Range 60
+Special Splash of 50/40 E 

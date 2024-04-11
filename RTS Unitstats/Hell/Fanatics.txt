@@ -1,0 +1,49 @@
+#Unitstats
+
+
+Health: 60
+Regen: 0.25
+F.A:	10
+Armour	I.M
+Squad Max:Min 18/18
+Build Cost = 190/0/0
+Reinforce Cost = 8/0/0
+
+Abilities
+Ability01 Frenzy - Double Attack Rate (Requires broken morale)
+Ability02 Bloodletting - Speed Bonus but breaks morale 
+
+Leaders
+Leader01 Prophet
+Leader02 Fanatic Champion 
+Leader03 Exposives Expert 
+
+Weapons
+#Melee
+Weapon01 Default Sword
+Melee Type B
+Damage 8-14
+Reload Time 0.5
+Modifier01: (target) HP Degen of 0.25 for 8s (stacks)
+
+#Ranged
+Weapon01 Basic Pistol
+Ranged Type B
+Accuracy 0.6
+Accuracy Reduction on Move 0.4
+Damage 3-5
+Burst Duration 4
+Burst Count 8
+Reload Time 4
+Range 10
+
+Weapon02 Grenade Launcher
+Ranged Type E
+Accuracy 1
+Accuracy Reduction on Move 1
+AoE 3
+Damage 4-50
+Burst Duration 1
+Burst Count 1
+Reload Time 6
+Range 40
