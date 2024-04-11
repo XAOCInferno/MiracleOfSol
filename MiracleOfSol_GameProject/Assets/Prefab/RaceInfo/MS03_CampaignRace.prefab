@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2239834111979523057
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6585257965259626179}
+  - component: {fileID: 1861967160173855116}
+  m_Layer: 0
+  m_Name: MS03_CampaignRace
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6585257965259626179
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2239834111979523057}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1861967160173855116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2239834111979523057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00d10069a95bc4f4c9effac3fe310f10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RaceName: Crusaders of Man
+  RaceDescription: Sent on the ultimate mission, to slay the Necromancer himself.
+  StartingObjects:
+  - {fileID: 6267188128064815991, guid: 08f5922cbcc55dc4cb5e062ac4318646, type: 3}
+  - {fileID: 6267188128064815991, guid: e4bafce7bbc38c44aa917acbb3ef821c, type: 3}
+  - {fileID: 6267188128064815991, guid: 982bf097a30c021478fc588edb580bf3, type: 3}
+  - {fileID: 6267188128064815991, guid: 56a8ad9a6f9a7694cbf415da2d8c080d, type: 3}
+  StartingObjectPositions:
+  - {x: 0, y: 0, z: 0}
+  - {x: 2, y: 0, z: 0}
+  - {x: 4, y: 0, z: 0}
+  - {x: 6, y: 0, z: 0}
+  StartingObjectRotations:
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}

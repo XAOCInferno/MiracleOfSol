@@ -1,0 +1,136 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2145586663189803544
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9020989605169245045}
+  - component: {fileID: 1965456241232067478}
+  m_Layer: 0
+  m_Name: Hero_Spellcaster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9020989605169245045
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145586663189803544}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1965456241232067478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145586663189803544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c6dcb219f61ec84aa9236639a5baf52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PositionInGMData: 15
+  PositionInLvlHierarchy: 3
+  IsBoss_IgnoreAIManager: 0
+  EntityName: Dark Wizard Sindyr
+  EntityDesc: A treacherous Wizard, once follower of Man, once follower of the Necromancer,
+    now living only to sow disorder and chaos.
+  EntityQuote: I NEED A QUOTE AHHHHHHH!
+  IsASquad: 1
+  IsProduction: 0
+  CanCapturePoints: 1
+  CaptureRate: 1
+  PositionInBuildUI: {x: 0, y: 0}
+  UI_Icon: {fileID: 21300000, guid: bf577b9bb299d03438e62e747d3d9187, type: 3}
+  HasAbility: 1
+  TotalBuildTime: 1
+  BuildTimePerEntity: 1
+  CostPerEntity:
+  - 250
+  - 50
+  - 0
+  BuildTier: 0
+  GeneratesResources: 0
+  ResourcesToGenerate:
+  - -0.05
+  - 0
+  - 0
+  UpdateCanvas: 0
+  TimeOutOfCombatForBonuses: 4
+  CanBeAttacked: 1
+  CanPassiveHeal: 1
+  MaxHP: 925
+  HPRegen: 1
+  OutOfCombat_HPRegen_Bonus: 50
+  HPDegen: 0
+  StartingHPPercent: 1
+  HealthDeathPercent: 0
+  MaxArmour: 90
+  ArmourRegen: 0.5
+  OutOfCombat_ArmourRegen_Bonus: 5
+  ArmourDegen: 0
+  StartingArmourPercent: 1
+  PiercingArmourType: 4
+  BaseMeleeResist: 1.4
+  BaseRangedResist: 1
+  CanBeRevived: 1
+  MaxVelocity: 5.75
+  AccelerationRate: 15
+  RotationRate: 400
+  EntityScale: {x: 1, y: 1, z: 1}
+  HasJump: 1
+  JumpIsTP: 1
+  JumpDistanceMax: 30
+  JumpHeightMax: 4
+  JumpCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  JumpVel: 30
+  JumpSetupTime: 0
+  JumpBreakdownTime: 0
+  JumpCustomImage: {fileID: 0}
+  ModsApplyOnLand: []
+  DeathExplosionsToSpawn: []
+  DeathExplosionsNames: []
+  ObjectModel: {fileID: 0}
+  LuxCoverArmourType: 4
+  AIAggroRange: 4.5
+  PrimaryXP: 0
+  SecondaryXP: 0
+  WeaponPartsRewardMax: 0
+  WeaponPartsRewardMin: 0

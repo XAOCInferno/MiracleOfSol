@@ -1,0 +1,160 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4422651424662797705
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1958960443766934355}
+  - component: {fileID: 4452680147944366533}
+  m_Layer: 0
+  m_Name: TutTankGrenadeMulti
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1958960443766934355
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4422651424662797705}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.88, y: 0.45, z: 2.94}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4452680147944366533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4422651424662797705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e35399e861611974fbe83cb62f06e8e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WeaponName: TankBossGrenadeMulti
+  WeaponEffectiveAgainst: All
+  PositionInGMData: 25
+  UsesProjectile: 1
+  ProjectileIsHoming: 0
+  CanCollide: 0
+  ProjectileSpeed: 11
+  ProjectileMaxHeight: 6
+  ProjectileUseCurve: 1
+  ProjectileAC:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.49874684
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  ProjectileVFX:
+  - {fileID: 8116969380890641243, guid: eb097baaf633b2d42a5ba8655e52f1a3, type: 3}
+  - {fileID: 7168885342477899032, guid: 666accd12823efe4cb746bf2a93df73d, type: 3}
+  RepeatingTracerSFX: {fileID: 8300000, guid: 73dde94bb26eaca469384b81876a3722, type: 3}
+  RepeatingTracerSoundTravelDistance: []
+  TracerEffect: {fileID: 2106743456396468353, guid: b33b978c7b462c34c87838680d519c14, type: 3}
+  DisplayIsMainWeapon: 0
+  DamagePiercingType: 6
+  Accuracy: 1
+  AccuracyReductionOnMove: 1
+  MaxDamage: 1
+  MinDamage: 0
+  DamageScale_Distance:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1.15
+      inSlope: 0
+      outSlope: -0.39999998
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0.75
+      inSlope: -0.39999998
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  SetupTime: 0.1
+  DurationPerBurst: 1.5
+  ShotsPerBurst: 3
+  BurstRandomness: 0
+  ReloadDuration: 4
+  MinReloadTime: 0
+  MaxRange: 40
+  MinRange: 0
+  FireOnMove: 1
+  FireArc: 360
+  BenefitsFromVerticality: 1
+  IgnoreLuxCover: 0
+  IgnoreHealthModifiers: 0
+  IgnoreRawCoverModifiers: 0
+  IgnoreMeleeResist: 0
+  IgnoreRangedResist: 1
+  IsMelee: 0
+  VFX_Target:
+  - {fileID: 711442879112206996, guid: 01fb6cb175b116a48965debe4e14f58b, type: 3}
+  VFX_Lifetime_Target: []
+  ModifiersToApply_Target:
+  - {fileID: 7195878235393169395, guid: 4c095ba9e1b47774abc2d6a7dc7575df, type: 3}
+  ModifierAoETime_Target:
+  - 0.5
+  ModifierNames_Target:
+  - OnHitSlow
+  ModifierChance_Target: []
+  ModifierRadius_Target:
+  - 1.5
+  ModifierTargetGround_Target: 
+  VFX_Caster: []
+  ModifiersToApply_Caster: []
+  ModifierAoETime_Caster: []
+  ModifierNames_Caster: []
+  ModifierChance_Caster: []
+  ModifierRadius_Caster: []
+  ModifierTargetGround_Caster: 

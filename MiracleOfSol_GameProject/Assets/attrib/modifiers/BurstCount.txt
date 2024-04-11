@@ -1,0 +1,26 @@
+#Default Dataholder
+#Indicate comment line with the hashtag
+
+#UniqueID for the modifier, used to check exclusivity
+$000014
+
+#ApplicationType
+Entity
+
+#Exclusive
+true
+
+ProbabilityOfApplying
+1.0
+
+#UsageType
+Multiplication
+
+Value
+1.0
+
+
+
+#Important Syntax!
+#MUST put float value under the sentences 'ProbabilityOfApplying' and 'Value'
+#These are needed as variables and are not comments.

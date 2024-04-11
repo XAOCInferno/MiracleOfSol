@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2145586663189803544
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9020989605169245045}
+  - component: {fileID: 1965456241232067478}
+  m_Layer: 0
+  m_Name: DEMO6 - Heavy Tank
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9020989605169245045
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145586663189803544}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1965456241232067478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145586663189803544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c6dcb219f61ec84aa9236639a5baf52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PositionInGMData: 7
+  EntityName: Demo Heavy Tank
+  IsASquad: 1
+  IsProduction: 0
+  CanCapturePoints: 1
+  CaptureRate: 1
+  PositionInBuildUI: {x: 0, y: 2}
+  UI_Icon: {fileID: 21300000, guid: 3255b497486acb74397e01801fd8018a, type: 3}
+  TotalBuildTime: 1
+  BuildTimePerEntity: 1
+  CostPerEntity:
+  - 400
+  - 200
+  - 0
+  BuildTier: 2
+  GeneratesResources: 0
+  ResourcesToGenerate:
+  - -0.05
+  - 0
+  - 0
+  UpdateCanvas: 0
+  CanBeAttacked: 1
+  CanPassiveHeal: 1
+  MaxHP: 400
+  HPRegen: 1
+  HPDegen: 0
+  StartingHPPercent: 1
+  HealthDeathPercent: 0
+  MaxArmour: 400
+  ArmourRegen: 1
+  ArmourDegen: 0
+  StartingArmourPercent: 1
+  PiercingArmourType: 10
+  MaxVelocity: 10
+  AccelerationRate: 3.333
+  EntityScale: {x: 5, y: 3, z: 3}
+  HasJump: 0
+  JumpIsTP: 0
+  JumpDistanceMax: 20
+  JumpHeightMax: 2
+  JumpVel: 5
+  JumpSetupTime: 1
+  JumpBreakdownTime: 1
+  JumpCustomImage: {fileID: 0}
+  ModsApplyOnLand: []

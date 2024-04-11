@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4422651424662797705
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1958960443766934355}
+  - component: {fileID: 4452680147944366533}
+  m_Layer: 0
+  m_Name: HellSpawnSword
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1958960443766934355
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4422651424662797705}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.88, y: 0.45, z: 2.94}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4452680147944366533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4422651424662797705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e35399e861611974fbe83cb62f06e8e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WeaponName: FanaticSword
+  PositionInGMData: 11
+  UsesProjectile: 0
+  CanCollide: 1
+  ProjectileSpeed: 5
+  ProjectileYSpeedModifier: 0.5
+  ProjectileVFX: []
+  RepeatingTracerSFX: {fileID: 8300000, guid: 575358ffb01a68447ac8625d1827c786, type: 3}
+  DisplayIsMainWeapon: 0
+  DamagePiercingType: 3
+  Accuracy: 1
+  AccuracyReductionOnMove: 0
+  MaxDamage: 35
+  MinDamage: 28
+  SetupTime: 0
+  DurationPerBurst: 0.7
+  ShotsPerBurst: 1
+  BurstRandomness: 0
+  ReloadDuration: 0
+  MaxRange: 2
+  MinRange: 0
+  FireArc: 360
+  IsMelee: 1
+  VFX_Target:
+  - {fileID: 711442879112206996, guid: ef05b02343fc3ae41927434970fde49f, type: 3}
+  VFX_Lifetime_Target: []
+  ModifiersToApply_Target:
+  - {fileID: 7195878235393169395, guid: ce4e69527654a23408b451d15d334597, type: 3}
+  ModifierAoETime_Target:
+  - 0.5
+  ModifierNames_Target:
+  - 'OnHit: HellSpawn: GenericDemonDebuffsOnMelee'
+  ModifierChance_Target:
+  - 1
+  ModifierRadius_Target:
+  - 1
+  ModifierTargetGround_Target: 00
+  ModifiersToApply_Caster: []
+  ModifierAoETime_Caster: []
+  ModifierNames_Caster: []
+  ModifierChance_Caster: []
+  ModifierRadius_Caster: []
+  ModifierTargetGround_Caster: 

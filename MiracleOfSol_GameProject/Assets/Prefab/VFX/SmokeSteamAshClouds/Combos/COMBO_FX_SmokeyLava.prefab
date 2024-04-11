@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &651634874271802840
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 651634874271802823}
+  - component: {fileID: 651634874271802822}
+  - component: {fileID: 651634874271802841}
+  m_Layer: 0
+  m_Name: COMBO_FX_SmokeyLava
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &651634874271802823
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651634874271802840}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.47, y: 0, z: -22.88}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &651634874271802822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651634874271802840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2af231bb9aad04c4e8183fce21d06579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VFXStorage: {fileID: 0}
+  IsLooping: 0
+  AllEffects:
+  - {fileID: 7789810862199624831, guid: 49a9b24e03b065d4d95c5e56cb2ea53e, type: 3}
+  - {fileID: 1544608781957088512, guid: 134cad90980ea8f49a7493cf38e396fa, type: 3}
+--- !u!114 &651634874271802841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651634874271802840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de4f16eee6e183c4f9b05fd5a9ba4aca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsLooping: 1
+  IsActive: 1
+  IsACombo: 0
+  IsNotAnEffect: 0
+  LifetimeMax: 5
+  LifetimeMin: 2
+  LifetimeRdmness: 1
+  DelayedDeathAmmount: 4

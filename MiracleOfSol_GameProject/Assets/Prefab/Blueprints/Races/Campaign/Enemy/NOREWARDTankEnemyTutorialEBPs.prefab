@@ -1,0 +1,137 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2145586663189803544
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9020989605169245045}
+  - component: {fileID: 1965456241232067478}
+  m_Layer: 10
+  m_Name: NOREWARDTankEnemyTutorialEBPs
+  m_TagString: Entity
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9020989605169245045
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145586663189803544}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1965456241232067478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145586663189803544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c6dcb219f61ec84aa9236639a5baf52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PositionInGMData: 29
+  PositionInLvlHierarchy: -1
+  IsBoss_IgnoreAIManager: 0
+  EntityName: Engine of Hell Tutorial
+  EntityDesc: HellTankBasic
+  EntityQuote: I NEED A QUOTE AHHHHHHH!
+  IsASquad: 1
+  IsProduction: 0
+  CanCapturePoints: 0
+  CaptureRate: 0
+  PositionInBuildUI: {x: 0, y: 0}
+  UI_Icon: {fileID: 21300000, guid: 6a6628a5d91a4234d9c0cb8be76096e2, type: 3}
+  HasAbility: 1
+  TotalBuildTime: 1
+  BuildTimePerEntity: 1
+  CostPerEntity:
+  - 250
+  - 50
+  - 0
+  BuildTier: 0
+  GeneratesResources: 0
+  ResourcesToGenerate:
+  - 0
+  - 0
+  - 0
+  UpdateCanvas: 0
+  TimeOutOfCombatForBonuses: 10000000
+  CanBeAttacked: 1
+  CanPassiveHeal: 0
+  MaxHP: 0
+  HPRegen: 5
+  OutOfCombat_HPRegen_Bonus: 0
+  HPDegen: 0
+  StartingHPPercent: 1
+  HealthDeathPercent: 0
+  MaxArmour: 800
+  ArmourRegen: 0
+  OutOfCombat_ArmourRegen_Bonus: 0
+  ArmourDegen: 0
+  StartingArmourPercent: 1
+  PiercingArmourType: 11
+  BaseMeleeResist: 1
+  BaseRangedResist: 1
+  CanBeRevived: 0
+  MaxVelocity: 4
+  AccelerationRate: 6
+  RotationRate: 30
+  EntityScale: {x: 1.5, y: 1, z: 1.5}
+  HasJump: 0
+  JumpIsTP: 0
+  JumpDistanceMax: 40
+  JumpHeightMax: 4
+  JumpCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  JumpVel: 30
+  JumpSetupTime: 2
+  JumpBreakdownTime: 1
+  JumpCustomImage: {fileID: 0}
+  ModsApplyOnLand: []
+  DeathExplosionsToSpawn:
+  - {fileID: 5110661261086429443, guid: 3d5e0d57232368e4280e429c3586a226, type: 3}
+  DeathExplosionsNames:
+  - Default_TankDE
+  ObjectModel: {fileID: 0}
+  LuxCoverArmourType: 6
+  AIAggroRange: 12
+  PrimaryXP: 10
+  SecondaryXP: 0
+  WeaponPartsRewardMax: 85
+  WeaponPartsRewardMin: 50
