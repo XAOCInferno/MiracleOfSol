@@ -10,7 +10,7 @@ public class PostProcessingManager : MonoBehaviour
 
     private DepthOfField DoF;
     private HDShadowSettings Shadows;
-    private AmbientOcclusion AO;
+    private ScreenSpaceAmbientOcclusion AO;
     private Bloom gBloom;
     public NoInterpMinFloatParameter[] ShadowDistances;
     public MinFloatParameter[] BloomThreshold;

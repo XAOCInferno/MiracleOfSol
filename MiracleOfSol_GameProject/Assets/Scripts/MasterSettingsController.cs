@@ -181,7 +181,7 @@ public class MasterSettingsController : MonoBehaviour
 
     public void SetResolution()
     {
-        Resolution tmpRes = Screen.resolutions[PlayerPrefs.GetInt("DesiredResolutionIndex", 0)];
+        Resolution tmpRes = Screen.resolutions[Mathf.Min(PlayerPrefs.GetInt("DesiredResolutionIndex", 0), Screen.resolutions.Length - 1)];
         Screen.SetResolution(tmpRes.width, tmpRes.height, Screen.fullScreen);
     }
 

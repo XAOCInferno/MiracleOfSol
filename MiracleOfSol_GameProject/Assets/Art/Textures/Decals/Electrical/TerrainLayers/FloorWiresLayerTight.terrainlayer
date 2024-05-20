@@ -11,7 +11,7 @@ TerrainLayer:
   m_NormalMapTexture: {fileID: 2800000, guid: 5522e5c9f9fc4f442a274420b8b59593, type: 3}
   m_MaskMapTexture: {fileID: 0}
   m_TileSize: {x: 6, y: 0.2}
-  m_TileOffset: {x: 526.27875, y: 0}
+  m_TileOffset: {x: 1900.6829, y: 0}
   m_Specular: {r: 0, g: 0, b: 0, a: 0}
   m_Metallic: 0.115
   m_Smoothness: 0.217
