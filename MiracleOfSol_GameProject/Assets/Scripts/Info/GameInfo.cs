@@ -36,7 +36,6 @@ public class GameInfo : MonoBehaviour
     public CameraFade CamFade;
     public Transform[] AI_CriticalDefencePoints;
     public List<int> MaxSquadsToDefendCrits;
-    //public LootManager LootManagerGlobal;
 
 
     public int HPRegenLuxCoverPos = 0;
