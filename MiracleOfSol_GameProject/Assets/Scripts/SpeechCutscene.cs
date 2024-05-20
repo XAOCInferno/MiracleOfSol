@@ -116,7 +116,6 @@ public class SpeechCutscene : MonoBehaviour
 
     private void OrderNextSpeech()
     {
-        print(Time.time);
         AS.Stop();
         CurrentClipToPlay++;
         IsDoingDelay = true;
