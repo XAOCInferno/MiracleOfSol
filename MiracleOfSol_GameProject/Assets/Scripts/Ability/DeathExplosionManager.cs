@@ -1,20 +1,62 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable]
+public struct DeathExplosionInfo
+{
+    public bool IsExclusive;
+    public GameObject NewExplosion;
+    public float ModLifetime;
+    public bool ModIsTimed;
+    public string ExplosionName;
+    public bool DestroyOnUse;
+
+    public DeathExplosionInfo(bool _isExclusive, GameObject _newExplosion, float _modLifetime, bool _modIsTimed, string _explosionName, bool _destroyOnUse)
+    {
+        IsExclusive = _isExclusive;
+        NewExplosion = _newExplosion;
+        ModLifetime = _modLifetime;
+        ModIsTimed = _modIsTimed;
+        ExplosionName = _explosionName;
+        DestroyOnUse = _destroyOnUse;
+    }
+}
+
 public class DeathExplosionManager : MonoBehaviour
 {
-    public List<GameObject> EntityHolder = new List<GameObject>();
-    public List<GameObject> DeathExplosionsToSpawn = new List<GameObject>();
-    public List<float> CurrentDeathExplosionTimers = new List<float>();
-    public List<bool> DeathExplosionIsTimed = new List<bool>();
-    public List<string> DeathExplosionName = new List<string>();
-    public List<bool> DestroyModOnActivate = new List<bool>();
-    public float TickRate = 0.15f;
+    private static List<GameObject> EntityHolder = new List<GameObject>();
+    private static List<GameObject> DeathExplosionsToSpawn = new List<GameObject>();
+    private static List<float> CurrentDeathExplosionTimers = new List<float>();
+    private static List<bool> DeathExplosionIsTimed = new List<bool>();
+    private static List<string> DeathExplosionName = new List<string>();
+    private static List<bool> DestroyModOnActivate = new List<bool>();
+    private static float TickRate = 0.15f;
 
-    private void Start() { InvokeRepeating(nameof(Internal_CheckForLifetimes), TickRate, TickRate); }
+    private void OnEnable()
+    {
+        Actions.OnCreateDeathExplosion += SetNewDeathExplosion;
+        StartCoroutine(nameof(InternalUpdate));
+    }
 
-    public void CheckForLifetimes(bool ChangeTime)
+    private void OnDisable()
+    {
+        Actions.OnCreateDeathExplosion -= SetNewDeathExplosion;
+        StopCoroutine(nameof(InternalUpdate));
+    }
+
+
+    private IEnumerator InternalUpdate()
+    {
+        while (true)
+        {
+            Internal_CheckForLifetimes();
+            yield return new WaitForSeconds(TickRate);
+        }
+    } 
+
+    private static void CheckForLifetimes(bool ChangeTime)
     {
         for (int i = 0; i < CurrentDeathExplosionTimers.Count; i++)
         {
@@ -30,24 +72,24 @@ public class DeathExplosionManager : MonoBehaviour
         }
     }
 
-    public void External_CheckForLifetimes()
+    public static void External_CheckForLifetimes()
     {
         CheckForLifetimes(false);
     }
-    public void Internal_CheckForLifetimes()
+    private static void Internal_CheckForLifetimes()
     {
         CheckForLifetimes(true);
     }
 
-    public void SetNewDeathExplosion(bool IsExclusive, GameObject ExplosionHolder, GameObject NewExplosion, float ModLifetime, bool ModIsTimed, string ExplosionName, bool DestroyOnUse)
+    public void SetNewDeathExplosion(DeathExplosionInfo ExplosionInfo, GameObject ExplosionHolder)
     {
-        if (NewExplosion != null && ExplosionHolder != null)
+        if (ExplosionInfo.NewExplosion != null && ExplosionHolder != null)
         {
-            if (ExplosionName != "" && IsExclusive)
+            if (ExplosionInfo.ExplosionName != "" && ExplosionInfo.IsExclusive)
             {
                 for (int i = 0; i < DeathExplosionName.Count; i++)
                 {
-                    if (DeathExplosionName[i] == ExplosionName && ExplosionHolder == EntityHolder[i])
+                    if (DeathExplosionName[i] == ExplosionInfo.ExplosionName && ExplosionHolder == EntityHolder[i])
                     {
                         RemoveDEAtPosition(i);
                     }
@@ -55,15 +97,15 @@ public class DeathExplosionManager : MonoBehaviour
             }
 
             EntityHolder.Add(ExplosionHolder);
-            DeathExplosionsToSpawn.Add(NewExplosion);
-            CurrentDeathExplosionTimers.Add(ModLifetime);
-            DeathExplosionIsTimed.Add(ModIsTimed);
-            DeathExplosionName.Add(ExplosionName);
-            DestroyModOnActivate.Add(DestroyOnUse);
+            DeathExplosionsToSpawn.Add(ExplosionInfo.NewExplosion);
+            CurrentDeathExplosionTimers.Add(ExplosionInfo.ModLifetime);
+            DeathExplosionIsTimed.Add(ExplosionInfo.ModIsTimed);
+            DeathExplosionName.Add(ExplosionInfo.ExplosionName);
+            DestroyModOnActivate.Add(ExplosionInfo.DestroyOnUse);
         }
     }
 
-    private void RemoveDEAtPosition(int pos)
+    private static void RemoveDEAtPosition(int pos)
     {
         EntityHolder.RemoveAt(pos);
         DeathExplosionsToSpawn.RemoveAt(pos);
@@ -73,7 +115,7 @@ public class DeathExplosionManager : MonoBehaviour
         DestroyModOnActivate.RemoveAt(pos);
     }
 
-    public List<GameObject> GetEntityDeathExplosions(string EntityName)
+    public static List<GameObject> GetEntityDeathExplosions(string EntityName)
     {
         List<GameObject> tmpList = new List<GameObject>();
         try

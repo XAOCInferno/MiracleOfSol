@@ -593,8 +593,8 @@ public class Health : MonoBehaviour
 
     private void DoDeathExplosions()
     {
-        GI.DEM.External_CheckForLifetimes();
-        List<GameObject> tmpDE = GI.DEM.GetEntityDeathExplosions(gameObject.name);
+        DeathExplosionManager.External_CheckForLifetimes();
+        List<GameObject> tmpDE = DeathExplosionManager.GetEntityDeathExplosions(gameObject.name);
 
         for(int i = 0; i < tmpDE.Count; i++)
         {

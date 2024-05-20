@@ -26,7 +26,7 @@ public class GameInfo : MonoBehaviour
     public GameObject EUS_UI_CurrentlySelectedParent;
     public GameObject SpeechCutsceneBubbleCanvas;
     public GameObject SpeechCutsceneBubble;
-    public DeathExplosionManager DEM;
+    //public DeathExplosionManager DEM;
     public GameObject MenuCanvas;
 
     public Collider[] AllJumpBlockers;

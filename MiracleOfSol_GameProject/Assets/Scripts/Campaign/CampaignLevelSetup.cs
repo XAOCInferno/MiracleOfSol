@@ -133,7 +133,10 @@ public class CampaignLevelSetup : MonoBehaviour
 
     private void SetBaseDeathExplosions(BasicInfo tmp_BI, GameObject TempObj)
     {
-        for (int DE = 0; DE < tmp_BI.EBPs.DeathExplosionsToSpawn.Length; DE++) { GI.DEM.SetNewDeathExplosion(false, TempObj, tmp_BI.EBPs.DeathExplosionsToSpawn[DE], 0, false, tmp_BI.EBPs.DeathExplosionsNames[DE], true); }
+        for (int DE = 0; DE < tmp_BI.EBPs.DeathExplosionsToSpawn.Length; DE++) 
+        {
+            Actions.OnCreateDeathExplosion.InvokeAction(new(false, tmp_BI.EBPs.DeathExplosionsToSpawn[DE], 0, false, tmp_BI.EBPs.DeathExplosionsNames[DE], true), TempObj);
+        }
     }
 
     private void CheckForBoss(GameObject TempObj)
