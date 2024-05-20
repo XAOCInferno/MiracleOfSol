@@ -21,6 +21,16 @@ public class LootManager : MonoBehaviour
     private List<float> WeaponPartsLifetime = new List<float>();
     private GameInfo GI;
 
+    private void OnEnable()
+    {
+        Actions.OnAddWeaponPartsAtLocation += AddWeaponPartsAtLocation;
+    }
+
+    private void OnDisable()
+    {
+        Actions.OnAddWeaponPartsAtLocation -= AddWeaponPartsAtLocation;
+    }
+
     private void Start()
     {
         CurrentWeaponParts = PlayerPrefs.GetInt("WeaponPartsCount", 0);

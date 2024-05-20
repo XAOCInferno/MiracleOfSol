@@ -36,7 +36,7 @@ public class GameInfo : MonoBehaviour
     public CameraFade CamFade;
     public Transform[] AI_CriticalDefencePoints;
     public List<int> MaxSquadsToDefendCrits;
-    public LootManager LootManagerGlobal;
+    //public LootManager LootManagerGlobal;
 
 
     public int HPRegenLuxCoverPos = 0;
@@ -56,7 +56,6 @@ public class GameInfo : MonoBehaviour
 
     private void Start()
     {
-        gameObject.TryGetComponent(out LootManagerGlobal);
         CurrentMission = GetCurrentLevel();
 
         foreach (Transform crit in AI_CriticalDefencePoints)

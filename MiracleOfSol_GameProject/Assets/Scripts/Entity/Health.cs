@@ -557,7 +557,7 @@ public class Health : MonoBehaviour
 
                 if(BI.EBPs.WeaponPartsRewardMax > 0)
                 {
-                    GI.LootManagerGlobal.AddWeaponPartsAtLocation(Random.Range(BI.EBPs.WeaponPartsRewardMin, BI.EBPs.WeaponPartsRewardMax), transform.position);
+                    Actions.OnAddWeaponPartsAtLocation.InvokeAction(Random.Range(BI.EBPs.WeaponPartsRewardMin, BI.EBPs.WeaponPartsRewardMax), transform.position);
                 }
 
                 GI.AllPlayers[BI.OwnedByPlayer].TryGetComponent(out SquadManager tmpSM);

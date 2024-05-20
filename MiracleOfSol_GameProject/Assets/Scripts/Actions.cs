@@ -1,4 +1,5 @@
 using System;
+using System.Numerics;
 
 public static class ActionExtensions
 {
@@ -108,6 +109,10 @@ public static class Actions
     public static Action<int, ResourceGroup, bool> OnUpdateResourcesForPlayer; //int: ID of player, ResourceGroup: ammount of resources to change, bool: update ui or not
     public static Action<int,  ResourceGroup> OnAttemptToChargePlayer; //int: ID of player, ResourceGroup: ammount of resources to change
     public static Action<ResourceGroup> OnUpdateResourceCanvasForPlayer; //ResourceGroup: the players actual resources
+
+    //[[Loot]]
+    public static Action<int, UnityEngine.Vector3> OnAddWeaponPartsAtLocation; //int: Number of parts, Vector3: Location
+
 
 }
 
