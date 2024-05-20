@@ -93,6 +93,11 @@ public static class ActionExtensions
 public static class Actions
 {
 
+    //[[Combat]]
+    public static Action<eAIAggressionTypes> OnChangeAIAggression; //eAIAggressionTypes: The new ai behaviour
+    public static Action<ModifierApplier> OnAddNewModifier; //ModifierApplier: Modifier to apply
+
+
     //[[Selection]]
     public static Action<GetIfSelected> OnRegisterSelectableObject; //GetIfSelected: Object selection controller
     public static Action<int> OnTrySelectHeroByButton; //int: ID of hero

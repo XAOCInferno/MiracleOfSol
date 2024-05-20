@@ -10,7 +10,6 @@ public class AI_Controller : MonoBehaviour
     private MusicManager GI_MM;
 
     private BasicInfo BI;
-    private CombatManager CM;
     private List<Vector3> DefendLocations = new List<Vector3>();
     private List<int> MaxSquadsToDefendALocation = new List<int>();
     private Vector3 HomeBasePos;
@@ -24,7 +23,6 @@ public class AI_Controller : MonoBehaviour
     {
         SM = gameObject.GetComponent<SquadManager>();
         GI = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameInfo>();
-        CM = GI.CombatManager.GetComponent<CombatManager>();
         GI.TryGetComponent(out GI_MM);
         //RPM = GI.ResourcePointMaster.GetComponent<ResourcePointManager>();
         BI = gameObject.GetComponent<BasicInfo>();
@@ -43,7 +41,10 @@ public class AI_Controller : MonoBehaviour
         DefendChokepoint(AllEntities, AllBI);
         IdleAILogic(AllEntities, AllBI, AllCombat);
 
-        if (GI_MM.IsInBoss) { CM.SetAIAggroState(true); }
+        if (GI_MM.IsInBoss) 
+        {
+            Actions.OnChangeAIAggression(eAIAggressionTypes.FullOnAggression);
+        }
     }
 
     private void CombatAILoop()
@@ -169,7 +170,7 @@ public class AI_Controller : MonoBehaviour
                                 Health tmp_Health = SM.Get_SingleHealth(tmp_IDs);
                                 try
                                 {
-                                    if (tmp_Health.GetCurrentHP_AsPercentOfMax() <= 0.9f || tmp_Health.GetCurrentArmour_AsPercentOfMax() <= 0.9f || CM.GetAIAggroState())
+                                    if (tmp_Health.GetCurrentHP_AsPercentOfMax() <= 0.9f || tmp_Health.GetCurrentArmour_AsPercentOfMax() <= 0.9f || CombatManager.GetAIAggroState() == eAIAggressionTypes.FullOnAggression)
                                     {
                                         AllCombat[i][j].HasBeenAggro = true;
                                     }

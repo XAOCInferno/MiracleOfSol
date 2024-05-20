@@ -14,19 +14,12 @@ public class DeathExplosion : MonoBehaviour
 
     private int PositionInLvlHierarchy = -1;
     private int OwnedByPlayer = -1;
-    private CombatManager CM;
     private bool IsActive = false;
 
     public void DoDeathExplosion(int tmpLvlHierarchy, int tmpOwnedBy, CombatManager tmpCM)
     {
         PositionInLvlHierarchy = tmpLvlHierarchy;
         OwnedByPlayer = tmpOwnedBy;
-
-        if (tmpCM == null) 
-        {
-            GameObject.FindGameObjectWithTag("GameController").TryGetComponent(out GameInfo tmpGI);
-            tmpGI.CombatManager.TryGetComponent(out CM);
-        }
 
         for (int mod = 0; mod < Mod_Target.Length; mod++)
         {
@@ -51,7 +44,7 @@ public class DeathExplosion : MonoBehaviour
         NewMod.transform.localScale = new Vector3(Size, Size, Size);
         NewMod.transform.position = ModPos;
         NewMod.name = "Death Explosion Modifier: " + gameObject.name;
-        CM.AddNewMod(NewMod_MA);
+        Actions.OnAddNewModifier.InvokeAction(NewMod_MA);
         AddToList.Add(NewMod);
         ModCurrent_Time.Add(0);
     }

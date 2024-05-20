@@ -109,7 +109,6 @@ public class AbilityCaster : MonoBehaviour
     private bool PreventAbilityCasting_ThroughButtonInput = false;
     private RampageController RC;
     private EntityMovement EM;
-    private CombatManager CM;
     private bool FXHasFired = false;
     private bool HasDoneVoiceLine = false;
 
@@ -120,7 +119,6 @@ public class AbilityCaster : MonoBehaviour
     private void Start()
     {
         GameObject.Find("GAME_MANAGER").TryGetComponent(out GI);
-        GI.CombatManager.TryGetComponent(out CM);
         gameObject.TryGetComponent(out BI);
         gameObject.TryGetComponent(out GIS);
 
@@ -1011,7 +1009,7 @@ public class AbilityCaster : MonoBehaviour
         NewMod.transform.localScale = new Vector3(Size, Size, Size);
         NewMod.transform.position = ModPos;
         NewMod.name = "Modifier: " + AbilityName;
-        CM.AddNewMod(NewMod_MA);
+        Actions.OnAddNewModifier(NewMod_MA);
         AddToList.Add(NewMod);
         AddToListLifetime.Add(0);
     }

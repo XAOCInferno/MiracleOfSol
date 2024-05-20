@@ -34,8 +34,7 @@ public class WaveBossSpecialSpawner : MonoBehaviour
     private void Start()
     {
         GameObject.FindWithTag("GameController").TryGetComponent(out GI);
-        GI.CombatManager.TryGetComponent(out CombatManager tmpCM);
-        tmpCM.SetAIAggroState(true);
+        Actions.OnChangeAIAggression(eAIAggressionTypes.FullOnAggression);
     }
 
     private void Update()

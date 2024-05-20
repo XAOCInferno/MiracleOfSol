@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum eAIAggressionTypes 
+{
+    Passive = 0,
+    FullOnAggression = 1,
+}
+
 public class CombatManager : MonoBehaviour
 {
     private float CombatCheckRate = 1.8f;
@@ -22,16 +28,37 @@ public class CombatManager : MonoBehaviour
     private float PreviousAbilityInvokeDepth = -1000;
     private float TimeCurrent;
     private float MinInvokeDepthTime = 0.04f;
-    private bool AI_FullAggro = false;
+    private static eAIAggressionTypes AI_Aggression = eAIAggressionTypes.Passive;
+
+    private void OnEnable()
+    {
+
+        Actions.OnChangeAIAggression += SetAIAggroState;
+        Actions.OnAddNewModifier += AddNewMod;
+
+    }
+
+    private void OnDisable()
+    {
+
+        Actions.OnChangeAIAggression -= SetAIAggroState;
+        Actions.OnAddNewModifier -= AddNewMod;
+
+    }
 
     private void Start()
     {
         InvokeRepeating(nameof(SetupBasicVariables),0.5f,0.5f);
     }
 
-    public void SetAIAggroState(bool state) { AI_FullAggro = state; }
+    public void SetAIAggroState(eAIAggressionTypes aggression) 
+    { 
 
-    public bool GetAIAggroState() { return AI_FullAggro; }
+        AI_Aggression = aggression; 
+
+    }
+
+    public static eAIAggressionTypes GetAIAggroState() { return AI_Aggression; }
 
     private void Update()
     {
@@ -189,7 +216,7 @@ public class CombatManager : MonoBehaviour
                                     {
                                         if (AllSquads[(int)tmp_eID[0]][(int)tmp_eID[1]] != null)
                                         {
-                                            if ((Vector3.Distance(AllSquads_Positions[(int)tmp_ID[0]][(int)tmp_ID[1]], AllSquads_Positions[(int)tmp_eID[0]][(int)tmp_eID[1]]) <= tmp_Combat.AggroRange) || AI_FullAggro)
+                                            if ((Vector3.Distance(AllSquads_Positions[(int)tmp_ID[0]][(int)tmp_ID[1]], AllSquads_Positions[(int)tmp_eID[0]][(int)tmp_eID[1]]) <= tmp_Combat.AggroRange) || AI_Aggression == eAIAggressionTypes.FullOnAggression)
                                             {
                                                 if (!AllSquads_Health[(int)tmp_eID[0]][(int)tmp_eID[1]].GetIfIncapacitated())
                                                 {

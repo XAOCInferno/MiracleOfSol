@@ -70,7 +70,6 @@ public class Combat : MonoBehaviour
     private EntityMovement EM;
     private AudioSourceController ASC;
     private AggressionManager AM;
-    private CombatManager CM;
 
     private List<GameObject> AppliedModsHolder_Target = new List<GameObject>();
     private List<GameObject> AppliedModsHolder_Caster = new List<GameObject>();
@@ -130,7 +129,6 @@ public class Combat : MonoBehaviour
         if (AllWeapons.Count > 0)
         {
             GameObject.FindWithTag("GameController").gameObject.TryGetComponent(out GI);
-            GI.CombatManager.TryGetComponent(out CM);
             GI.TryGetComponent(out BF);
             gameObject.TryGetComponent(out EM);
 
@@ -788,7 +786,7 @@ public class Combat : MonoBehaviour
         NewMod.transform.localScale = new Vector3(Size, Size, Size);
         NewMod.transform.position = ModPos;
         NewMod.name = "Modifier: " + AbilityName + " |From Weapon: " + WeaponName;
-        CM.AddNewMod(NewMod_MA);
+        Actions.OnAddNewModifier(NewMod_MA);
         AddToList.Add(NewMod);
         AddToListLifetime.Add(0);
     }

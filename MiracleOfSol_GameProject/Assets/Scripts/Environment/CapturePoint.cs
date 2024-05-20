@@ -158,6 +158,8 @@ public class CapturePoint : MonoBehaviour
             ASC.StopLoopingSound();
             if (!HasActivated && ChangeActiveStateOnCapture.Length > 0) { foreach (GameObject obj in ChangeActiveStateOnCapture) { if (obj != null) { obj.SetActive(!obj.activeSelf); } } }
             HasActivated = true;
+
+            //This is causing a null error, refactor
             gameObject.TryGetComponent(out CapturePointArtManager CPAM);
             CPAM.ChangeMatStatus();
         }

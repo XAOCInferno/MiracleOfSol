@@ -20,7 +20,6 @@ public class GameInfo : MonoBehaviour
     public GameObject ProjectileDefault;
     public GameObject ResourcePointMaster;
     public GameObject DefaultObjectModel;
-    public GameObject CombatManager;
     public GameObject GlobalVoicePlayer;
     public GameObject PickRaceManager;
     public GameObject RevivalCapturePoint;

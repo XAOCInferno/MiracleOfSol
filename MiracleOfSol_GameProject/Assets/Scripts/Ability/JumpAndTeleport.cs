@@ -43,7 +43,6 @@ public class JumpAndTeleport : MonoBehaviour
     private float SetupTimeCurrent;
     private float BreakdownTimeCurrent;
     private GameInfo GI;
-    private CombatManager CM;
     private bool HasSpawnedTPVFX = false;
     private bool HasReachedTarget = false;
     private Vector3 EntityOffset = new Vector3(0,-1f,0);
@@ -58,7 +57,6 @@ public class JumpAndTeleport : MonoBehaviour
         EM = gameObject.GetComponent<EntityMovement>(); //FIX THIS sigh why it's not working
         GIS = gameObject.GetComponent<GetIfSelected>();
         GI = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameInfo>();
-        CM = GI.CombatManager.GetComponent<CombatManager>();
         SetupTimeCurrent = BI.EBPs.JumpSetupTime; BreakdownTimeCurrent = BI.EBPs.JumpBreakdownTime;
         InitialJumpOffset = transform.position[1];
     }
@@ -417,7 +415,7 @@ public class JumpAndTeleport : MonoBehaviour
         NewMod.transform.localScale = new Vector3(Size, Size, Size);
         NewMod.transform.position = ModPos;
         NewMod.name = "Jump Modifier: " + gameObject.name;
-        CM.AddNewMod(NewMod_MA);
+        Actions.OnAddNewModifier.InvokeAction(NewMod_MA);
         AddToList.Add(NewMod);
         ModCurrent_Time.Add(0);
     }
