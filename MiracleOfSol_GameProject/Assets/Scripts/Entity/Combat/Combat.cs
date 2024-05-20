@@ -95,6 +95,7 @@ public class Combat : MonoBehaviour
     public float MeleeDuelRange = 3;
 
     private BasicInfo BI;
+    private BasicFunctions BF;
     private AnimationPlayer AP;
     private LayerMask EntityLayer;
     private float TickRate = 0.015f;
@@ -130,6 +131,7 @@ public class Combat : MonoBehaviour
         {
             GameObject.FindWithTag("GameController").gameObject.TryGetComponent(out GI);
             GI.CombatManager.TryGetComponent(out CM);
+            GI.TryGetComponent(out BF);
             gameObject.TryGetComponent(out EM);
 
             VFX_Storage = GI.VFX_Storage.transform;
@@ -553,9 +555,10 @@ public class Combat : MonoBehaviour
     {
         float tmp_AccuracyBonus = 0;
         float tmp_DamageBonus = 1;
-        
-        if (BI.GetCoverStatus().GetArrayItem(out _, out int CurrentlyActiveCover, true))
+
+        if (BF.FindIfArrayContainsTrueOrFalse(BI.GetCoverStatus(), true))
         {
+            int CurrentlyActiveCover = BF.ReturnTrueFalsePositionInArray(BI.GetCoverStatus(), true);
             tmp_AccuracyBonus = GI.GetValueOfLuxCover(GI.AccuracyBonusLuxCoverPos, CurrentlyActiveCover, BI.EBPs.LuxCoverArmourType);
             tmp_DamageBonus = GI.GetValueOfLuxCover(GI.DamageBonusLuxCoverPos, CurrentlyActiveCover, BI.EBPs.LuxCoverArmourType);
         }

@@ -19,7 +19,6 @@ public class CheckForSpeech : MonoBehaviour
             Speeches[0].SetActive(true);
             Destroy(Speeches[1]);
         }
-        PlayerPrefsX.SetBool("GameIsWon", false);
         Destroy(gameObject);
     }
 }

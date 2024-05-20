@@ -1,20 +1,30 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public static class BasicFunctions
+public class BasicFunctions : MonoBehaviour
 {
-    public static bool GetArrayItem<T>(this T[] SearchArray, out bool _DoesContain, out int _ContainPos, T DesiredItem)
+    public bool FindIfArrayContainsTrueOrFalse(bool[] Array, bool State = true)
     {
-        for(int i = 0; i < SearchArray.Length; i++)
-        {
-            if (EqualityComparer<T>.Default.Equals(DesiredItem, SearchArray[i]))
-            { 
-                _ContainPos = i; 
-                _DoesContain = true; 
-                return true; 
-            }
-        }
-        _DoesContain = false;
-        _ContainPos = -1;
+        foreach(bool Item in Array) { if (Item == State) { return true; } }
         return false;
+    }
+
+    public bool FindIfListContainsTrueOrFalse(List<bool> List, bool State = true)
+    {
+        foreach (bool Item in List) { if (Item == State) { return true; } }
+        return false;
+    }
+
+    public int ReturnTrueFalsePositionInArray(bool[] Array, bool State = true)
+    {
+        for (int i = 0; i < Array.Length;i++) { if (Array[i] == State) { return i; } }
+        return -1; //Error!
+    }
+
+    public int ReturnTrueFalsePositionInList(List<bool> List, bool State = true)
+    {
+        for (int i = 0; i < List.Count; i++) { if (List[i] == State) { return i; } }
+        return -1; //Error!
     }
 }

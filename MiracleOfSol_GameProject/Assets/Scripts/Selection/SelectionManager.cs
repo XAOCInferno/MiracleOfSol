@@ -11,6 +11,7 @@ public class SelectionManager : MonoBehaviour
     public bool AllowMouseSelection = true;
     public bool AllowKeyboardSelection = true;
 
+    public BasicFunctions BF;
     public Camera Cam;
     public RectTransform RT;
     public List<GetIfSelected> SelectableObjects = new List<GetIfSelected>();
@@ -40,6 +41,7 @@ public class SelectionManager : MonoBehaviour
     private void Start()
     {
         if (GI == null) { GameObject.FindWithTag("GameController").TryGetComponent(out GI); }
+        if (BF == null) { GI.TryGetComponent(out BF); }
 
         EntityLayer = LayerMask.NameToLayer("Entity");
         TerrainLayer = LayerMask.NameToLayer("Terrain");
@@ -112,7 +114,7 @@ public class SelectionManager : MonoBehaviour
         }
         catch
         {
-            //Probably in cutscene...
+            //PRobably in cutscene...
         }
     }
 
@@ -207,8 +209,8 @@ public class SelectionManager : MonoBehaviour
             if (IsDragging)
             {
                 bool[] MultiSelectKeys = { Input.GetKey("left ctrl"), Input.GetKey("right ctrl"), Input.GetKey("left shift"), Input.GetKey("right shift") };
-                bool IsHoldMultiSelectKeys = MultiSelectKeys.GetArrayItem(out bool _, out int _, true);
-            
+                bool IsHoldMultiSelectKeys = BF.FindIfArrayContainsTrueOrFalse(MultiSelectKeys);
+
                 if (!IsHoldMultiSelectKeys)
                 {
                     ClickDrag();

@@ -22,6 +22,7 @@ public class EntityMovement : MonoBehaviour
     private Transform AttackTarget;
 
     private BasicInfo BI;
+    private BasicFunctions BF;
     private NavMeshAgent Agent;
     private GetIfSelected GIS;
     private SquadManager SM;
@@ -69,6 +70,7 @@ public class EntityMovement : MonoBehaviour
         MovementPath = new NavMeshPath();
 
         GameObject.FindWithTag("GameController").TryGetComponent(out GI);
+        GI.TryGetComponent(out BF);
 
         gameObject.TryGetComponent(out BI);
         gameObject.TryGetComponent(out Agent);
@@ -599,9 +601,10 @@ public class EntityMovement : MonoBehaviour
         float tmp_SpeedBonus = 0;
 
         try
-        {            
-            if (BI.GetCoverStatus().GetArrayItem(out bool _, out int CurrentlyActiveCover, true))
+        {
+            if (BF.FindIfArrayContainsTrueOrFalse(BI.GetCoverStatus(), true))
             {
+                int CurrentlyActiveCover = BF.ReturnTrueFalsePositionInArray(BI.GetCoverStatus(), true);
                 tmp_SpeedBonus = GI.GetValueOfLuxCover(GI.SpeedBonusLuxCoverPos, CurrentlyActiveCover, BI.EBPs.LuxCoverArmourType);
             }
         }

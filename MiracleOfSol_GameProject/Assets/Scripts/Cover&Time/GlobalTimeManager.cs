@@ -35,7 +35,9 @@ public class GlobalTimeManager : MonoBehaviour
     public float ExposureChangeRate = 25;
 
     public GameObject MainDirectionalLight;
-
+    public GameObject SunriseObj;
+    public GameObject SunsetObj;
+    public GameObject CentreOfMapObj;
     public float TickRateModifier = 1;
     public float YTickRateModifier = 4;
     public float CurrentTime = 0;
@@ -60,17 +62,12 @@ public class GlobalTimeManager : MonoBehaviour
     private GameInfo GI;
     private AudioSource GlobalVoiceAS;
     private MusicManager GlobalMM;
-    private bool IsSetup = false;
+    //private UnityEngine.Rendering.HighDefinition.Fog CurrentFog;
+
 
     // Start is called before the first frame update
-    public void SetupGTM()
+    void Start()
     {
-        TerrainArtMkrs TAM = GameObject.FindGameObjectWithTag("TerrainArtMkrs").GetComponent<TerrainArtMkrs>();
-        MainDirectionalLight = TAM.MainDirectionalLight;
-        GameObject CentreOfMapObj = TAM.CentreOfMapMkr;
-        SunrisePos = TAM.SunriseMkr.transform.position;
-        SunsetPos = TAM.SunsetMkr.transform.position;
-
         InBossSpecialQuotes_All = new AudioClip[4][] { InBossSpecialQuotes_Sun, InBossSpecialQuotes_FullMoon, InBossSpecialQuotes_Moon, InBossSpecialQuotes_BloodMoon };
         AllQuotes = new AudioClip[4][] { SunQuotes, FullMoonQuotes, MoonQuotes, BloodMoonQuotes };
 
@@ -104,6 +101,10 @@ public class GlobalTimeManager : MonoBehaviour
         }
 
         DirectionalLightAsLight = MainDirectionalLight.GetComponent<Light>();
+        SunrisePos = SunriseObj.transform.position;
+        Destroy(SunriseObj);
+        SunsetPos = SunsetObj.transform.position;
+        Destroy(SunsetObj);
 
         CentreOfMapPosition[1] = 0;
         //FogVolume.profile.TryGet<UnityEngine.Rendering.HighDefinition.Fog>(out CurrentFog);
@@ -111,18 +112,11 @@ public class GlobalTimeManager : MonoBehaviour
         CheckForInvalidKeyframes(DaySkyColourOverLifeG); CheckForInvalidKeyframes(NightSkyColourOverLifeG);
         CheckForInvalidKeyframes(DaySkyColourOverLifeB); CheckForInvalidKeyframes(NightSkyColourOverLifeB);
         CheckForInvalidKeyframes(DaySkyColourOverLifeA); CheckForInvalidKeyframes(NightSkyColourOverLifeA);
-        IsSetup = true;
-    }
-
-    public void UnpackGTM()
-    {
-        IsSetup = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!IsSetup) { return; }
         float NewYPos = MainDirectionalLight.transform.parent.position[1]; 
         Color NewColour;
 
@@ -213,6 +207,7 @@ public class GlobalTimeManager : MonoBehaviour
             if (AC.keys[i].value > 1) { AC.keys[i].value = 1; }
             else if (AC.keys[i].value <= 0) { AC.keys[i].value = 0.01f; }
         }
+
     }
 
     public float GetTimeAsPercent()

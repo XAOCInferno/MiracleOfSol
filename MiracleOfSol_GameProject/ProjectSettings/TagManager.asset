@@ -15,7 +15,6 @@ TagManager:
   - SettingsManager
   - GlobalVolume
   - TerrainRender
-  - TerrainArtMkrs
   layers:
   - Default
   - TransparentFX

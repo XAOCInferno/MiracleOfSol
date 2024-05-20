@@ -53,6 +53,7 @@ public class Health : MonoBehaviour
     private bool HasDoneDieLogic = false;
 
     private BasicInfo BI;
+    private BasicFunctions BF;
     private EBP_Info EBPs;
     private GameInfo GI;
     private Combat C_Manager;
@@ -68,6 +69,7 @@ public class Health : MonoBehaviour
     void Start()
     {
         GameObject.FindWithTag("GameController").TryGetComponent(out GI);
+        GI.TryGetComponent(out BF);
         GI.UI_Canvas.TryGetComponent(out EUS_UI);
 
         gameObject.TryGetComponent(out BI);
@@ -492,8 +494,9 @@ public class Health : MonoBehaviour
         float tmp_HPRegenBonus = 0;
         float tmp_HPDegenBonus = 0;
 
-        if (BI.GetCoverStatus().GetArrayItem(out bool _, out int CurrentlyActiveCover, true))
+        if (BF.FindIfArrayContainsTrueOrFalse(BI.GetCoverStatus(), true))
         {
+            int CurrentlyActiveCover = BF.ReturnTrueFalsePositionInArray(BI.GetCoverStatus(), true);
             try
             {
                 tmp_HPRegenBonus = GI.GetValueOfLuxCover(GI.HPRegenLuxCoverPos, CurrentlyActiveCover, BI.EBPs.LuxCoverArmourType);

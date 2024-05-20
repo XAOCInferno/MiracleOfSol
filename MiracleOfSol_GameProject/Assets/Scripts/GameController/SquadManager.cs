@@ -127,6 +127,12 @@ public class SquadManager : MonoBehaviour
             try
             {
                 AllOwnedObjects.RemoveAt(SquadPos);
+                /*AllObjEM.RemoveAt(SquadPos);//Check if this change is correct!
+                AllObjBI.RemoveAt(SquadPos);
+                AllObjGIS.RemoveAt(SquadPos);
+                AllObjCombat.RemoveAt(SquadPos);
+                AllObjXP.RemoveAt(SquadPos);
+                AllObjHealth.RemoveAt(SquadPos);*/
                 AllObjEM[SquadPos].RemoveAt(EntityPos);
                 AllObjBI[SquadPos].RemoveAt(EntityPos);
                 AllObjGIS[SquadPos].RemoveAt(EntityPos);
@@ -152,6 +158,7 @@ public class SquadManager : MonoBehaviour
                     AllObjCombat[SquadPos].RemoveAt(EntityPos);
                     AllObjXP[SquadPos].RemoveAt(EntityPos);
                     AllObjHealth[SquadPos].RemoveAt(EntityPos);
+                    //AllOwnedObjects[SquadPos] = null;
                 }
             }
             catch
