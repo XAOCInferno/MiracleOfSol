@@ -48,9 +48,8 @@ public class GetIfSelected : MonoBehaviour
             DevDisplaySticky();
         }
 
-        SelectionManager SM = GI.SelectionManager.GetComponent<SelectionManager>();
-        GetIfSelected GIS = gameObject.GetComponent<GetIfSelected>();
-        SM.SelectableObjects.Add(GIS);
+        Actions.OnRegisterSelectableObject(this);
+
     }
 
     private void DevDisplaySticky()

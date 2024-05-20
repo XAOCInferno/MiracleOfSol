@@ -38,6 +38,21 @@ public class SelectionManager : MonoBehaviour
         KeyCode.Alpha9, KeyCode.Alpha0
     };
 
+    private void OnEnable()
+    {
+
+        Actions.OnTrySelectHeroByButton += CheckHeroSelectionViaKeyboard;
+        Actions.OnRegisterSelectableObject += RegisterSelectableObject;
+
+    }
+
+    private void OnDisable()
+    {
+        Actions.OnTrySelectHeroByButton -= CheckHeroSelectionViaKeyboard;
+        Actions.OnRegisterSelectableObject -= RegisterSelectableObject;
+
+    }
+
     private void Start()
     {
         if (GI == null) { GameObject.FindWithTag("GameController").TryGetComponent(out GI); }
@@ -79,6 +94,18 @@ public class SelectionManager : MonoBehaviour
         SelectableObjects_BI.Add(tmpBI);
         SelectableObjects_VLM.Add(tmpVLM);
         SelectableObjects_Health.Add(tmpHealth);
+    }
+
+    private void RegisterSelectableObject(GetIfSelected SelectableObject)
+    {
+
+        if (SelectableObjects.Contains(SelectableObject))
+        {
+            return;
+        }
+
+        SelectableObjects.Add(SelectableObject);
+
     }
 
     private void SetIconsForHeroes()
