@@ -20,7 +20,6 @@ public class PickRace : MonoBehaviour
     private List<Button> RaceButtons = new List<Button>();
     private List<int> StoredRacePicks = new List<int>();
     private GameInfo GI;
-    private ResourceManager RM;
 
     private void Start()
     {
@@ -29,7 +28,6 @@ public class PickRace : MonoBehaviour
         if (AllSpawnLocations == null) { AllSpawnLocations = GameObject.Find("AllPlayerPositions").transform; }
 
         GI = GameObject.FindWithTag("GameController").GetComponent<GameInfo>();
-        RM = GI.ResourceManager.GetComponent<ResourceManager>();
 
         for (int j = 0; j < AllSpawnLocations.childCount; j++)
         {
@@ -56,18 +54,6 @@ public class PickRace : MonoBehaviour
             SetPlayerRace(AllRaceInfo.Length-1, 1);
         }
     }
-
-    /*[ServerRpc]
-    private void SubmitRaceRequest(ServerRpcParams rpcParams = default, int Race = 0)
-    {
-        RaceInfo RI = gameObject.AddComponent<RaceInfo>();
-        RI.SetAllInfoFromBlueprint(AllRaceInfo[Race]);
-
-        foreach (Button btn in RaceButtons)
-        {
-            Destroy(btn.gameObject);
-        }
-    }*/
 
     private void SetPlayerRace(int Race, int BtnRow)
     {
@@ -112,7 +98,7 @@ public class PickRace : MonoBehaviour
                 }
             }
 
-            RM.InitPlayerResources(AllSpawnLocations.childCount);
+            Actions.OnInitiatePlayerResources.InvokeAction(AllSpawnLocations.childCount);
             World.SetActive(true);
             Destroy(gameObject);
         }

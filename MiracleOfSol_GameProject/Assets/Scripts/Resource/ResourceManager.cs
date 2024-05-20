@@ -2,56 +2,94 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ResourceManager : MonoBehaviour
+public struct ResourceGroup
 {
-    public ResourceCanvas RC;
-    public float[][] PlayerResources;
-    public int PlayerCount;
-    public float[] StartingResources = new float[3] { 300, 10, 0 };
-    public void InitPlayerResources(int NumberPlayers)
-    {
-        PlayerCount = NumberPlayers;
-        PlayerResources = new float[(int) NumberPlayers][];
+    public float Primary;
+    public float Secondary;
+    public float Special;
 
-        for(int i = 0; i < PlayerCount; i++)
-        {
-            PlayerResources[i] = StartingResources;
-            UpdateResourceCanvas(i);
-        }
+    public ResourceGroup(float _primary, float _secondary, float _special)
+    {
+        Primary = _primary; Secondary = _secondary; Special = _special;
     }
 
-    public bool CheckEnoughCurrency(int PlayerNumb, float[] Cost)
+    public bool HasEnoughResources(ResourceGroup cost)
     {
-        for(int i = 0; i < PlayerResources[PlayerNumb].Length; i++)
-        {
-            if(PlayerResources[PlayerNumb][i] - Cost[i] < 0)
-            {
-                return false;
-            }
-        }
-
-        for (int i = 0; i < PlayerResources[PlayerNumb].Length; i++)
-        {
-            PlayerResources[PlayerNumb][i] -= Cost[i];
-            UpdateResourceCanvas(PlayerNumb);
-        }
-
+        if(Primary < cost.Primary || Secondary < cost.Secondary || Special < cost.Special) return false;
         return true;
     }
 
-    public void ChangeResourceCount(int PlayerNumb, float[] Resource, bool UpdateCanvas)
+    public void ChangeResources(ResourceGroup changeBy, float multiplier)
     {
+        Primary += changeBy.Primary * multiplier;
+        Secondary += changeBy.Secondary * multiplier;
+        Special += changeBy.Special * multiplier;
+    }
+}
 
-        for (int i = 0; i < PlayerResources[PlayerNumb].Length; i++)
-        {
-            PlayerResources[PlayerNumb][i] += Resource[i];
-        }
+public class ResourceManager : MonoBehaviour
+{
+    public int PlayerCount;
+    public ResourceGroup StartingResources = new ResourceGroup(300,10,0);
 
-        if (UpdateCanvas) { UpdateResourceCanvas(PlayerNumb); }
+    private static ResourceGroup[] PlayerResources;
+
+
+    private void OnEnable()
+    {
+        Actions.OnUpdateResourcesForPlayer += ChangeResourceCount;
+        Actions.OnInitiatePlayerResources += InitPlayerResources;
     }
 
-    private void UpdateResourceCanvas(int PlayerNumb)
+    private void OnDisable()
     {
-        if (PlayerNumb == 1&& RC != null) { RC.ChangeResources(PlayerResources[PlayerNumb]); }//Edit later for AI too.
+        Actions.OnUpdateResourcesForPlayer -= ChangeResourceCount;
+        Actions.OnInitiatePlayerResources -= InitPlayerResources;
+    }
+
+    public void InitPlayerResources(int NumberPlayers)
+    {
+
+        PlayerCount = NumberPlayers;
+        PlayerResources = new ResourceGroup[NumberPlayers];
+
+        for(int i = 0; i < PlayerCount; i++)
+        {
+
+            PlayerResources[i] = StartingResources;
+            Actions.OnUpdateResourceCanvasForPlayer.InvokeAction(PlayerResources[i]);
+
+        }
+
+    }
+
+    public static bool AttemptToChargePlayer(int PlayerNumb, ResourceGroup Cost)
+    {
+
+        if(PlayerResources[PlayerNumb].HasEnoughResources(Cost) == false)
+        {
+
+            return false;
+
+        }
+
+        PlayerResources[PlayerNumb].ChangeResources(Cost, -1);
+
+        return true;
+
+    }
+
+    public void ChangeResourceCount(int PlayerNumb, ResourceGroup Resource, bool UpdateCanvas)
+    {
+
+        PlayerResources[PlayerNumb].ChangeResources(Resource, 1);
+
+        if (UpdateCanvas)
+        {
+
+            Actions.OnUpdateResourceCanvasForPlayer.InvokeAction(PlayerResources[PlayerNumb]);
+
+        }
+
     }
 }

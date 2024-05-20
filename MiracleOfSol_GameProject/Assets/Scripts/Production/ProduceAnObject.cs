@@ -18,7 +18,6 @@ public class ProduceAnObject : MonoBehaviour
     public Button ButtonTemplate;
 
     private BasicInfo BI;
-    private ResourceManager RM;
 
     public int NumberButtonsX = 4;
     public int NumberButtonsY = 2;
@@ -32,7 +31,6 @@ public class ProduceAnObject : MonoBehaviour
     {
         GI = GameObject.FindWithTag("GameController").GetComponent<GameInfo>();
         BI = gameObject.GetComponent<BasicInfo>();
-        RM = GI.ResourceManager.GetComponent<ResourceManager>();
         ButtonTemplate.GetComponent<RectTransform>().sizeDelta = new Vector2(128, 128);
 
         //OnSelectActivate Temp_OSA = gameObject.AddComponent<OnSelectActivate>();
@@ -136,9 +134,9 @@ public class ProduceAnObject : MonoBehaviour
 
         string tmp_name = CurrentEntity.EntityName;
         float tmp_time = CurrentEntity.TotalBuildTime;
-        float[] tmp_cost = new float[3] { CurrentEntity.CostPerEntity[0] * SBP.SquadMin, CurrentEntity.CostPerEntity[1] * SBP.SquadMin, CurrentEntity.CostPerEntity[2] * SBP.SquadMin };
+        ResourceGroup tmp_cost = new ( CurrentEntity.CostPerEntity[0] * SBP.SquadMin, CurrentEntity.CostPerEntity[1] * SBP.SquadMin, CurrentEntity.CostPerEntity[2] * SBP.SquadMin );
 
-        if (RM.CheckEnoughCurrency(BI.OwnedByPlayer, tmp_cost))
+        if (ResourceManager.AttemptToChargePlayer(BI.OwnedByPlayer, tmp_cost))
         {
             BuildQueue.Add(CurrentUnit.gameObject);
             TimeUntilBuilt.Add(tmp_time);

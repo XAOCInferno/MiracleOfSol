@@ -8,7 +8,6 @@ public class GameInfo : MonoBehaviour
 
 
     public GameObject MainCamera;
-    public GameObject ResourceManager;
     public GameObject UI_Canvas;
     public GameObject ProductionUIMaster;
     public GameObject ProductionUI;
@@ -68,7 +67,6 @@ public class GameInfo : MonoBehaviour
         }
 
         if (MainCamera == null) { MainCamera = Camera.main.gameObject; }
-        if(ResourceManager == null) { ResourceManager = GameObject.Find("RESOURCE_MANAGER"); }
         AllLuxCoverModifierHolders = new float[6][][] { HPRegenBonusFromLuxCover, HPDegenBonusFromLuxCover, AccuracyBonusFromLuxCover, DamageBonusFromLuxCover, DamageResistFromLuxCover, SpeedBonusFromLuxCover }; 
     }
 

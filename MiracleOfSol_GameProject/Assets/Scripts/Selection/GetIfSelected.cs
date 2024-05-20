@@ -48,7 +48,7 @@ public class GetIfSelected : MonoBehaviour
             DevDisplaySticky();
         }
 
-        Actions.OnRegisterSelectableObject(this);
+        Actions.OnRegisterSelectableObject.InvokeAction(this);
 
     }
 

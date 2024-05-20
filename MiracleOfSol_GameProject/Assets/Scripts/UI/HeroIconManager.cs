@@ -22,7 +22,7 @@ public class HeroIconManager : MonoBehaviour
     public void SelectEntityViaButton()
     {
 
-        Actions.OnTrySelectHeroByButton(HeroID);
+        Actions.OnTrySelectHeroByButton.InvokeAction(HeroID);
 
     }
 

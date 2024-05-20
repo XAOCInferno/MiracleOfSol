@@ -2,16 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
+
+[Serializable]
+public struct ResourceCanvasEntries
+{
+    public TextMeshProUGUI Primary;
+    public TextMeshProUGUI Secondary;
+    public TextMeshProUGUI Special;
+}
 
 public class ResourceCanvas : MonoBehaviour
 {
-    public TextMeshProUGUI[] ResCanvas;
+    [SerializeField] private ResourceCanvasEntries ResourceCanvasTextFields;
 
-    public void ChangeResources(float[] NewResources)
+    private void OnEnable()
     {
-        for(int i = 0; i < Mathf.Min(ResCanvas.Length,NewResources.Length); i++)
-        {
-            ResCanvas[i].text = NewResources[i].ToString();       
-        }
+        Actions.OnUpdateResourceCanvasForPlayer += ChangeResources;
+    }
+
+    private void OnDisable()
+    {
+        Actions.OnUpdateResourceCanvasForPlayer -= ChangeResources;
+    }
+
+    public void ChangeResources(ResourceGroup NewResources)
+    {
+
+        ResourceCanvasTextFields.Primary.text = NewResources.Primary.ToString();
+        ResourceCanvasTextFields.Secondary.text = NewResources.Secondary.ToString();
+        ResourceCanvasTextFields.Special.text = NewResources.Special.ToString();
+
     }
 }

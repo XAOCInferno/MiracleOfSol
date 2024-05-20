@@ -97,5 +97,12 @@ public static class Actions
     public static Action<GetIfSelected> OnRegisterSelectableObject; //GetIfSelected: Object selection controller
     public static Action<int> OnTrySelectHeroByButton; //int: ID of hero
 
+
+    //[[Resources]]
+    public static Action<int> OnInitiatePlayerResources; //int: ID of player
+    public static Action<int, ResourceGroup, bool> OnUpdateResourcesForPlayer; //int: ID of player, ResourceGroup: ammount of resources to change, bool: update ui or not
+    public static Action<int,  ResourceGroup> OnAttemptToChargePlayer; //int: ID of player, ResourceGroup: ammount of resources to change
+    public static Action<ResourceGroup> OnUpdateResourceCanvasForPlayer; //ResourceGroup: the players actual resources
+
 }
 

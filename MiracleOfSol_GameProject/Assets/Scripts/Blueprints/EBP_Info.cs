@@ -31,7 +31,7 @@ public class EBP_Info : MonoBehaviour
 
     //Resource Info
     public bool GeneratesResources = false;
-    public float[] ResourcesToGenerate = new float[3] { 0, 0, 0 };
+    public ResourceGroup ResourcesToGenerate = new ResourceGroup( 0, 0, 0 );
     public bool UpdateCanvas = false;
 
     //Health Info

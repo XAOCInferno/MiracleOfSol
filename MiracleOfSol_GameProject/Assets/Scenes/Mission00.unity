@@ -35370,8 +35370,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpecialSindyrSpeechIsDone: 0
   MainCamera: {fileID: 963194225}
-  SelectionManager: {fileID: 2052499352}
-  ResourceManager: {fileID: 1717591221}
   UI_Canvas: {fileID: 1937647838}
   ProductionUIMaster: {fileID: 300165624}
   ProductionUI: {fileID: 1813880048}
@@ -69870,12 +69868,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8f85f7faf0666a4c8d579133f8323ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RC: {fileID: 0}
   PlayerCount: 0
-  StartingResources:
-  - 300
-  - 10
-  - 0
 --- !u!1001 &1719454858
 PrefabInstance:
   m_ObjectHideFlags: 0
