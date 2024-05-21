@@ -2,20 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-/*using MLAPI;
-using MLAPI.Messaging;
-using MLAPI.NetworkVariable;*/
 
 public class PickRace : MonoBehaviour
 {
-    public int MissionNumber = 0;
-    public bool SkipPick = true;
-    public GameObject World;
-    public Transform AllSpawnLocations;
-    public Transform ParentForBtnSpawn;
-    public Button ButtonTemplate;
-    public Vector2 ButtonOffset = new Vector2(100, 100);
-    public RaceInfo[] AllRaceInfo;
+    public static int MissionNumber = 0;
+    [SerializeField] private bool SkipPick = true;
+    [SerializeField] private GameObject World;
+    [SerializeField] private Transform AllSpawnLocations;
+    [SerializeField] private Transform ParentForBtnSpawn;
+    [SerializeField] private Button ButtonTemplate;
+    [SerializeField] private Vector2 ButtonOffset = new Vector2(100, 100);
+    [SerializeField] private RaceInfo[] AllRaceInfo;
 
     private List<Button> RaceButtons = new List<Button>();
     private List<int> StoredRacePicks = new List<int>();

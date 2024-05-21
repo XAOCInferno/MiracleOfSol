@@ -21,7 +21,6 @@ public class GameInfo : MonoBehaviour
     public GameObject ResourcePointMaster;
     public GameObject DefaultObjectModel;
     public GameObject GlobalVoicePlayer;
-    public GameObject PickRaceManager;
     public GameObject RevivalCapturePoint;
     public GameObject EUS_UI_CurrentlySelectedParent;
     public GameObject SpeechCutsceneBubbleCanvas;

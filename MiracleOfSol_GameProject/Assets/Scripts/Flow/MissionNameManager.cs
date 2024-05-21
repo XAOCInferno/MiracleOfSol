@@ -5,19 +5,16 @@ using UnityEngine;
 public class MissionNameManager : MonoBehaviour
 {
     public GameObject[] AllMissionNames;
-    private PickRace PR;
 
     private void Start()
     {
-        GameObject.FindGameObjectWithTag("GameController").TryGetComponent(out GameInfo tmpGI);
-        tmpGI.PickRaceManager.TryGetComponent(out PR);
         ActivateMissionName();
     }
 
     private void ActivateMissionName()
     {
         DeActivateMissionNames();
-        AllMissionNames[PR.MissionNumber].SetActive(true);
+        AllMissionNames[PickRace.MissionNumber].SetActive(true);
     }
 
     private void DeActivateMissionNames()
