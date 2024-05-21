@@ -95,6 +95,17 @@ public static class ActionExtensions
 public static class Actions
 {
 
+    public static Action<bool> OnSetPauseStatus;
+
+    public static Action<CircularVisionEmitter> OnDrawVisionCircle; //CircularVisionEmitter: Information about who, where and radius of the vision 
+    public static Action OnDemandFogRedraw;
+
+
+    //////
+    ////DEPRECIATED
+    ////Part of the old program
+    //////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////
     //[[Combat]]
     public static Action<eAIAggressionTypes> OnChangeAIAggression; //eAIAggressionTypes: The new ai behaviour
     public static Action<ModifierApplier> OnAddNewModifier; //ModifierApplier: Modifier to apply
@@ -123,6 +134,6 @@ public static class Actions
     //[[Movement]]
     public static Action<Collider> OnRegisterJumpBlocker; //GameObject: The object that is blocking
     public static Action<Collider> OnDeRegisterJumpBlocker; //GameObject: The object that is blocking
-
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////
 }
 
