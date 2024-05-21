@@ -1009,7 +1009,7 @@ public class AbilityCaster : MonoBehaviour
         NewMod.transform.localScale = new Vector3(Size, Size, Size);
         NewMod.transform.position = ModPos;
         NewMod.name = "Modifier: " + AbilityName;
-        Actions.OnAddNewModifier(NewMod_MA);
+        Actions.OnAddNewModifier.InvokeAction(NewMod_MA);
         AddToList.Add(NewMod);
         AddToListLifetime.Add(0);
     }
