@@ -28,7 +28,6 @@ public class GameInfo : MonoBehaviour
     public GameObject SpeechCutsceneBubble;
     public GameObject MenuCanvas;
 
-    public Collider[] AllJumpBlockers;
     public List<GameObject> AllPlayers = new List<GameObject>();
     public List<SquadManager> AllPlayers_SM = new List<SquadManager>();
     public Sprite DefaultMMDot;
@@ -47,9 +46,38 @@ public class GameInfo : MonoBehaviour
     public bool IsInCutscene = false;
     public int CurrentMission;
 
+    private List<Collider> AllJumpBlockers = new();
     private List<Vector3> AI_CriticalDefenceLocations = new List<Vector3>();
     private bool IsCheckingForCamFade = false;
 
+
+    private void OnEnable()
+    {
+        Actions.OnRegisterJumpBlocker += AllJumpBlockers.Add;
+        Actions.OnDeRegisterJumpBlocker += DeRegisterJumpObject;
+    }
+    private void OnDisable()
+    {
+        Actions.OnRegisterJumpBlocker -= AllJumpBlockers.Add;
+        Actions.OnDeRegisterJumpBlocker -= DeRegisterJumpObject;
+    }
+
+    private void DeRegisterJumpObject(Collider objectToDeRegister)
+    {
+        for (int i = 0; i < AllJumpBlockers.Count; i++)
+        {
+
+            if (AllJumpBlockers[i] == objectToDeRegister)
+            {
+
+                AllJumpBlockers.RemoveAt(i);
+                return;
+
+            }
+
+        }
+
+    }
 
     private void Start()
     {
@@ -181,14 +209,21 @@ public class GameInfo : MonoBehaviour
     {
         bool IsValidJump = true;
 
-        for(int i = 0; i < AllJumpBlockers.Length; i++)
+        for(int i = 0; i < AllJumpBlockers.Count; i++)
         {
             if(AllJumpBlockers[i] != null)
             {
                 if (AllJumpBlockers[i].bounds.Contains(DesiredJump))
                 {
-                    IsValidJump = false; break;
+                    IsValidJump = false; 
+                    break;
                 }
+            }
+            else
+            {
+
+                AllJumpBlockers.RemoveAt(i);
+
             }
         }
 

@@ -120,5 +120,10 @@ public static class Actions
     public static Action<int, UnityEngine.Vector3> OnAddWeaponPartsAtLocation; //int: Number of parts, Vector3: Location
 
 
+    //[[Movement]]
+    public static Action<Collider> OnRegisterJumpBlocker; //GameObject: The object that is blocking
+    public static Action<Collider> OnDeRegisterJumpBlocker; //GameObject: The object that is blocking
+
+
 }
 

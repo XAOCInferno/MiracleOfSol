@@ -120,11 +120,14 @@ public class SpeechCutscene : MonoBehaviour
         CurrentClipToPlay++;
         IsDoingDelay = true;
 
+        StopCoroutine(nameof(PlayVoiceLineAfterDelay));
         if (CurrentClipToPlay < SpeechDelays.Length)
         {
-            Invoke(nameof(EndVoiceDelay), SpeechDelays[CurrentClipToPlay]);
+
+            StartCoroutine(nameof(PlayVoiceLineAfterDelay), CurrentClipToPlay);
+
         }
-        else
+        else if(GI.IsInCutscene)
         {
             SBM.ClearSpeechBubble();
             GI.IsInCutscene = false;
@@ -202,11 +205,13 @@ public class SpeechCutscene : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("LevelUpScene");
     }
 
-    private void EndVoiceDelay()
+    private IEnumerator PlayVoiceLineAfterDelay(int clipToPlay)
     {
+        yield return new WaitForSeconds(SpeechDelays[CurrentClipToPlay]);
+
         AS.Stop();
-        SBM.UpdateSpeechBubbleArt(SpeechIcon[CurrentClipToPlay], ActorName[CurrentClipToPlay], SpeechScript[CurrentClipToPlay]);
-        AS.PlayOneShot(AllVoice[CurrentClipToPlay]);
+        SBM.UpdateSpeechBubbleArt(SpeechIcon[clipToPlay], ActorName[clipToPlay], SpeechScript[clipToPlay]);
+        AS.PlayOneShot(AllVoice[clipToPlay]);
         IsDoingDelay = false;
     }
 
