@@ -17,7 +17,6 @@ public class SpeechCutscene : MonoBehaviour
     public string[] ActorName;
     public string[] SpeechScript;
     public bool PlayOnStart = false;
-    public AudioSource AS;
     public GameObject[] ChangeStateOnActivate;
     public GameObject[] ChangeStateOnComplete;
     public string CreateObjectiveOnStart = "";
@@ -40,11 +39,6 @@ public class SpeechCutscene : MonoBehaviour
         if (DEV_SKIPME){ AllVoice = new AudioClip[0]; SpeechDelays = new float[0]; }
         SBM = GI.SpeechCutsceneBubble.GetComponent<SpeechBubbleManager>();
         TBM = GI.SpeechCutsceneBubble.GetComponent<TutorialBubbleManager>();
-
-        if (AS == null)
-        {
-            AS = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameInfo>().GlobalVoicePlayer.GetComponent<AudioSource>();
-        }
 
         if (PlayOnStart) { Invoke(nameof(InitVoiceCutscene),InitialDelayTime); };
 
@@ -116,7 +110,7 @@ public class SpeechCutscene : MonoBehaviour
 
     private void OrderNextSpeech()
     {
-        AS.Stop();
+        GlobalVoicePlayer.StopPlaying();
         CurrentClipToPlay++;
         IsDoingDelay = true;
 
@@ -209,9 +203,9 @@ public class SpeechCutscene : MonoBehaviour
     {
         yield return new WaitForSeconds(SpeechDelays[CurrentClipToPlay]);
 
-        AS.Stop();
+        GlobalVoicePlayer.StopPlaying();
         SBM.UpdateSpeechBubbleArt(SpeechIcon[clipToPlay], ActorName[clipToPlay], SpeechScript[clipToPlay]);
-        AS.PlayOneShot(AllVoice[clipToPlay]);
+        GlobalVoicePlayer.PlayVoiceLine(AllVoice[clipToPlay]);
         IsDoingDelay = false;
     }
 
@@ -219,7 +213,7 @@ public class SpeechCutscene : MonoBehaviour
     {
         if (IsPlaying)
         {
-            if (!AS.isPlaying)
+            if (!GlobalVoicePlayer.GetIfPlaying())
             {
                 if (!IsDoingDelay)
                 {

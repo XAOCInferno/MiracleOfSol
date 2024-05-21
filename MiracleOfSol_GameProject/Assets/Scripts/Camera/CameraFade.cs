@@ -8,6 +8,9 @@ public class CameraFade : MonoBehaviour
     private static CameraFade _instance;
     public static CameraFade Instance { get { return _instance; } }
 
+    [SerializeField] private float OverrideCameraInitialFadeTime = -1;
+    [SerializeField] private float OverrideCameraTimeToMove = -1;
+
     private float InitialFadeDelayTime = 4;
     private float TimeToMove = 4;
     public bool IsMovingBetweenStates = false;
@@ -17,7 +20,6 @@ public class CameraFade : MonoBehaviour
     private  Color DesiredColour;
     private Color PreviousColour;
     private float CurrentTime;
-    private bool LogicSetup = false;
     private float TimerInitialDelayTime = 0;
     private bool IsCheckingForInitialDelayTime = true;
 
@@ -40,39 +42,61 @@ public class CameraFade : MonoBehaviour
 
     private void SetupLogic()
     {
-        LogicSetup = true;
         gameObject.TryGetComponent(out selfImage);
         selfImage.color = new Color(0, 0, 0, 1);
         DesiredColour = new Color(0, 0, 0, 255);
         PreviousColour = new Color(0, 0, 0, 255);
-        ChangeState(true, false);
+
+
+        float? tmpInitialFadeTime = null;
+        float? tmpTimeToMove = null;
+
+        if (OverrideCameraInitialFadeTime != -1)
+        {
+            tmpInitialFadeTime = OverrideCameraInitialFadeTime;
+        }
+
+        if (OverrideCameraTimeToMove != -1)
+        {
+            tmpTimeToMove = OverrideCameraTimeToMove;
+        }
+
+        ChangeState(true, false, tmpInitialFadeTime, tmpTimeToMove);
+
     }
 
     private void Update()
     {
-        if (IsMovingBetweenStates)
+        if (_instance.IsMovingBetweenStates)
         {
-            CurrentTime += Time.deltaTime;
-            selfImage.color = Color.Lerp(PreviousColour, DesiredColour, CurrentTime / TimeToMove);
+            _instance.CurrentTime += Time.deltaTime;
+            selfImage.color = Color.Lerp(PreviousColour, DesiredColour, _instance.CurrentTime / _instance.TimeToMove);
 
-            if (selfImage.color == DesiredColour) { IsMovingBetweenStates = false; }
+            if (selfImage.color == DesiredColour) { _instance.IsMovingBetweenStates = false; }
         }
 
-        if (IsCheckingForInitialDelayTime) 
-        { 
-            TimerInitialDelayTime += Time.deltaTime;
-            if(TimerInitialDelayTime >= InitialFadeDelayTime)
+        if (_instance.IsCheckingForInitialDelayTime) 
+        {
+            _instance.TimerInitialDelayTime += Time.deltaTime;
+            if(_instance.TimerInitialDelayTime >= _instance.InitialFadeDelayTime)
             {
-                IsCheckingForInitialDelayTime = false;
+                _instance.IsCheckingForInitialDelayTime = false;
                 ChangeState(true, false);
             }
         }
     }
 
-    public static void ChangeState(bool ForceState = false, bool NewState = false, float _InitialFadeDelayTime = 6, float _TimeToMove = 4)
+    public static void ChangeState(bool ForceState = false, bool NewState = false, float? _InitialFadeDelayTime = null, float? _TimeToMove = null)
     {
-        _instance.InitialFadeDelayTime = _InitialFadeDelayTime;
-        _instance.TimeToMove = _TimeToMove;
+        if (_InitialFadeDelayTime.HasValue)
+        {
+            _instance.InitialFadeDelayTime = _InitialFadeDelayTime.Value;
+        }
+
+        if (_TimeToMove.HasValue)
+        {
+            _instance.TimeToMove = _TimeToMove.Value;
+        }
 
         if (_instance.TimerInitialDelayTime < _instance.InitialFadeDelayTime)
         {

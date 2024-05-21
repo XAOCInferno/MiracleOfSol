@@ -944,7 +944,7 @@ public class AbilityCaster : MonoBehaviour
 
         if(VoiceLineOnCast.Length > 0 && !HasDoneVoiceLine)
         {
-            VLM.PlaySpecificVoiceLine(VoiceLineOnCast[Random.Range(0, VoiceLineOnCast.Length)], true);
+            VLM.PlaySpecificVoiceLine(VoiceLineOnCast[Random.Range(0, VoiceLineOnCast.Length)], true, false);
         }
 
         if (IsRampage) { PlayDelayedRampageLine(); }
@@ -973,7 +973,7 @@ public class AbilityCaster : MonoBehaviour
 
         if (VoiceLineOnCast.Length > 0)
         {
-            VLM.PlaySpecificVoiceLine(VoiceLineOnCast[Random.Range(0, VoiceLineOnCast.Length)], true);
+            VLM.PlaySpecificVoiceLine(VoiceLineOnCast[Random.Range(0, VoiceLineOnCast.Length)], false, false);
         }
 
         if (IsRampage) { PlayDelayedRampageLine(); }
@@ -984,7 +984,7 @@ public class AbilityCaster : MonoBehaviour
     {
         if (VoiceLineOnRampageDuration.Length > 0)
         {
-            VLM.PlaySpecificVoiceLine(VoiceLineOnRampageDuration[Random.Range(0, VoiceLineOnRampageDuration.Length)], false);
+            VLM.PlaySpecificVoiceLine(VoiceLineOnRampageDuration[Random.Range(0, VoiceLineOnRampageDuration.Length)], false, true);
         }
     }
 

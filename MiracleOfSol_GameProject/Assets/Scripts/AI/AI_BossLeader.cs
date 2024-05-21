@@ -105,7 +105,7 @@ public class AI_BossLeader : MonoBehaviour
 
     private void RepeatingTaunt()
     {
-        VLM.PlaySpecificVoiceLine(TauntLines[Random.Range(0, TauntLines.Length)],true);
+        VLM.PlaySpecificVoiceLine(TauntLines[Random.Range(0, TauntLines.Length)], true, false);
         Invoke(nameof(RepeatingTaunt), TauntMinDelay + Random.Range(0, TauntRandomDelayBonus));
     }
 

@@ -4793,7 +4793,6 @@ MonoBehaviour:
   SpeechScript:
   - Enough of this! Taste DIVINE RETRIBUTION!
   PlayOnStart: 1
-  AS: {fileID: 625716880}
   ChangeStateOnActivate: []
   ChangeStateOnComplete: []
   CreateObjectiveOnStart: 
@@ -12370,6 +12369,7 @@ Transform:
   - {fileID: 1500188128}
   - {fileID: 2052499354}
   - {fileID: 1717591222}
+  - {fileID: 1605791529}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &253279510
@@ -14093,7 +14093,6 @@ MonoBehaviour:
     and absorb its fire.
   - Cover me! Get me in range so that I may throw a grenade and disable it.
   PlayOnStart: 0
-  AS: {fileID: 625716880}
   ChangeStateOnActivate: []
   ChangeStateOnComplete: []
   CreateObjectiveOnStart: 
@@ -24286,7 +24285,6 @@ MonoBehaviour:
   SpeechScript:
   - Thus, the way opens for the faithful.
   PlayOnStart: 0
-  AS: {fileID: 625716880}
   ChangeStateOnActivate: []
   ChangeStateOnComplete: []
   CreateObjectiveOnStart: 
@@ -28888,134 +28886,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1973361559}
   m_SourcePrefab: {fileID: 100100000, guid: e1ad923f15eb0294d965f81bf2db936d, type: 3}
---- !u!1 &625716879
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 625716881}
-  - component: {fileID: 625716880}
-  m_Layer: 0
-  m_Name: GlobalAS
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!82 &625716880
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 625716879}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: f75d0ba6d624ca743a8d2a93cfd94be0, type: 2}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 100
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 1
-  BypassListenerEffects: 0
-  BypassReverbZones: 1
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!4 &625716881
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 625716879}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 140.1145, y: -45.552265, z: 149.18521}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &626875708
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37101,7 +36971,6 @@ MonoBehaviour:
   - As predicted, the way opens.
   - We have little time to waste, let us advance.
   PlayOnStart: 0
-  AS: {fileID: 625716880}
   ChangeStateOnActivate: []
   ChangeStateOnComplete: []
   CreateObjectiveOnStart: 
@@ -41232,8 +41101,6 @@ MonoBehaviour:
   ProjectileDefault: {fileID: 5685620175524415770, guid: a9c5326ad20cbb949a52585587b7d787, type: 3}
   ResourcePointMaster: {fileID: 858994991}
   DefaultObjectModel: {fileID: 2180419389044982337, guid: 2ac1eac07edb8c641ba3f405e521881e, type: 3}
-  GlobalVoicePlayer: {fileID: 625716879}
-  PickRaceManager: {fileID: 1530300700}
   RevivalCapturePoint: {fileID: 1326751038015497145, guid: d59df831451d1fa40985c2486243e366, type: 3}
   EUS_UI_CurrentlySelectedParent: {fileID: 2102379607}
   SpeechCutsceneBubbleCanvas: {fileID: 778461390}
@@ -43064,7 +42931,6 @@ MonoBehaviour:
   - Hmm. No, my scanners detect only a single entity.
   - So, the leader of these fools. Good.
   PlayOnStart: 0
-  AS: {fileID: 625716880}
   ChangeStateOnActivate: []
   ChangeStateOnComplete:
   - {fileID: 1062864381}
@@ -52003,7 +51869,6 @@ MonoBehaviour:
     You shall be tested, prepare.
   - Enough of this! I will cleanse you from this land, beast!
   PlayOnStart: 0
-  AS: {fileID: 625716880}
   ChangeStateOnActivate: []
   ChangeStateOnComplete:
   - {fileID: 364045201}
@@ -53133,6 +52998,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5ab3b4419c0e204caf1cfbef45725b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OverrideCameraInitialFadeTime: -1
+  OverrideCameraTimeToMove: -1
   IsMovingBetweenStates: 1
 --- !u!114 &1096072975
 MonoBehaviour:
@@ -57950,6 +57817,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5ab3b4419c0e204caf1cfbef45725b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OverrideCameraInitialFadeTime: -1
+  OverrideCameraTimeToMove: -1
   IsMovingBetweenStates: 0
 --- !u!114 &1176517485
 MonoBehaviour:
@@ -61163,6 +61032,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5ab3b4419c0e204caf1cfbef45725b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OverrideCameraInitialFadeTime: -1
+  OverrideCameraTimeToMove: -1
   IsMovingBetweenStates: 0
 --- !u!114 &1241084725
 MonoBehaviour:
@@ -63588,6 +63459,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5ab3b4419c0e204caf1cfbef45725b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OverrideCameraInitialFadeTime: -1
+  OverrideCameraTimeToMove: -1
   IsMovingBetweenStates: 1
 --- !u!114 &1294128189
 MonoBehaviour:
@@ -70781,6 +70654,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5ab3b4419c0e204caf1cfbef45725b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OverrideCameraInitialFadeTime: -1
+  OverrideCameraTimeToMove: -1
   IsMovingBetweenStates: 1
 --- !u!114 &1433878467
 MonoBehaviour:
@@ -76081,11 +75956,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 881500515}
   m_SourcePrefab: {fileID: 100100000, guid: a68a30e4d36714d47abf1b799d25c6ba, type: 3}
---- !u!1 &1530300700 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5860969691552258955, guid: 9cd66bb47d055e246841a4f68c767f52, type: 3}
-  m_PrefabInstance: {fileID: 2146792352}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1531493303
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -79468,6 +79338,68 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3386380950174552942, guid: 504bd56e04c75b54aad0e80e98ee1746, type: 3}
   m_PrefabInstance: {fileID: 1597574964}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1605791528
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 251399318}
+    m_Modifications:
+    - target: {fileID: 959787483301194987, guid: c2325d6d786d653478aeab49eb6ebb01, type: 3}
+      propertyPath: m_Name
+      value: GlobalVoicePlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165698450891240276, guid: c2325d6d786d653478aeab49eb6ebb01, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165698450891240276, guid: c2325d6d786d653478aeab49eb6ebb01, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165698450891240276, guid: c2325d6d786d653478aeab49eb6ebb01, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165698450891240276, guid: c2325d6d786d653478aeab49eb6ebb01, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165698450891240276, guid: c2325d6d786d653478aeab49eb6ebb01, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165698450891240276, guid: c2325d6d786d653478aeab49eb6ebb01, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165698450891240276, guid: c2325d6d786d653478aeab49eb6ebb01, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165698450891240276, guid: c2325d6d786d653478aeab49eb6ebb01, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165698450891240276, guid: c2325d6d786d653478aeab49eb6ebb01, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165698450891240276, guid: c2325d6d786d653478aeab49eb6ebb01, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c2325d6d786d653478aeab49eb6ebb01, type: 3}
+--- !u!4 &1605791529 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5165698450891240276, guid: c2325d6d786d653478aeab49eb6ebb01, type: 3}
+  m_PrefabInstance: {fileID: 1605791528}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1607410187
 PrefabInstance:
@@ -93028,7 +92960,6 @@ MonoBehaviour:
   - I am detecting movement around this mountain, I will adjust my scanner to get
     a reading.
   PlayOnStart: 0
-  AS: {fileID: 625716880}
   ChangeStateOnActivate: []
   ChangeStateOnComplete: []
   CreateObjectiveOnStart: 
@@ -95697,6 +95628,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5ab3b4419c0e204caf1cfbef45725b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OverrideCameraInitialFadeTime: -1
+  OverrideCameraTimeToMove: -1
   IsMovingBetweenStates: 0
 --- !u!114 &1926892430
 MonoBehaviour:
@@ -96513,7 +96446,6 @@ MonoBehaviour:
   - Damn! A gate blocks the way. Perhaps we are not welcome here?
   - It matters not, if we capture that mechanism, the gate can be opened from here
   PlayOnStart: 0
-  AS: {fileID: 625716880}
   ChangeStateOnActivate: []
   ChangeStateOnComplete: []
   CreateObjectiveOnStart: 
@@ -105354,7 +105286,6 @@ MonoBehaviour:
   - Your faith is inspiring. I see why Aziah reveres you so. Now, we must advance.
   - 'Of course, my Champion. '
   PlayOnStart: 1
-  AS: {fileID: 625716880}
   ChangeStateOnActivate: []
   ChangeStateOnComplete:
   - {fileID: 1942042329}
@@ -105967,7 +105898,6 @@ MonoBehaviour:
     Use your foul magic and take us to our missing squad member.
   - "Oh fear not, I cannot deceive you now. Step into my portal\u2026"
   PlayOnStart: 0
-  AS: {fileID: 625716880}
   ChangeStateOnActivate: []
   ChangeStateOnComplete: []
   CreateObjectiveOnStart: 
@@ -106599,7 +106529,6 @@ MonoBehaviour:
   - Lo, if Sol is willing, open the way so we can enact Divine Retribution upon these
     fools who delay us here.
   PlayOnStart: 0
-  AS: {fileID: 625716880}
   ChangeStateOnActivate: []
   ChangeStateOnComplete: []
   CreateObjectiveOnStart: 
@@ -107931,7 +107860,6 @@ SceneRoots:
   - {fileID: 249525600}
   - {fileID: 1330640298}
   - {fileID: 1019988209}
-  - {fileID: 625716881}
   - {fileID: 778461389}
   - {fileID: 1370782997}
   - {fileID: 1407829211}

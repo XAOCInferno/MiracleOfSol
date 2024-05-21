@@ -262,7 +262,7 @@ public class AI_BossTankSecondPhase : MonoBehaviour
     {
         if (AllAbilityCastLines.Length > 0)
         {
-            VLM.PlaySpecificVoiceLine(AllAbilityCastLines[Random.Range(0, AllAbilityCastLines.Length)], true);
+            VLM.PlaySpecificVoiceLine(AllAbilityCastLines[Random.Range(0, AllAbilityCastLines.Length)], true, false);
         }
 
         CurrentRampageTargetPos = AllEnemyHeroes[Random.Range(0, AllEnemyHeroes.Count)].transform.position;
@@ -280,7 +280,7 @@ public class AI_BossTankSecondPhase : MonoBehaviour
     {
         if (AllRampageCastLines.Length > 0)
         {
-            VLM.PlaySpecificVoiceLine(AllRampageCastLines[Random.Range(0, AllRampageCastLines.Length)], true);
+            VLM.PlaySpecificVoiceLine(AllRampageCastLines[Random.Range(0, AllRampageCastLines.Length)], true, false);
         }
 
         CurrentRampageTargetPos = AllEnemyHeroes[Random.Range(0, AllEnemyHeroes.Count)].transform.position;

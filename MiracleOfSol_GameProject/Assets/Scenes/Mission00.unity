@@ -335,7 +335,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 5500
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 9.1837e-41, y: NaN, z: NaN, w: 6e-45}
+  m_BoundingSphereOverride: {x: 0, y: -3.4294926e-37, z: 5.66e-43, w: -6.562012e-37}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -2804,7 +2804,6 @@ MonoBehaviour:
   - Blessings upon us for they shall not hinder our final victory! As the agent of
     Sol almighty I will strike down the blasphemour like wheat at the harvest!
   PlayOnStart: 1
-  AS: {fileID: 625716880}
   ChangeStateOnActivate: []
   ChangeStateOnComplete: []
   CreateObjectiveOnStart: 
@@ -12044,7 +12043,6 @@ MonoBehaviour:
   - Damn I know it. Begone humans. I shan't allow you to take any more of my attention.
     Remove yourself from my sight, NOW!
   PlayOnStart: 1
-  AS: {fileID: 625716880}
   ChangeStateOnActivate:
   - {fileID: 427102312}
   ChangeStateOnComplete: []
@@ -23526,7 +23524,6 @@ MonoBehaviour:
   - 'Yes, my son. Decimate his defences, bring down the Gates of Hell itself, so
     that the angels of Sol may enact the Divine Judgment upon him. '
   PlayOnStart: 1
-  AS: {fileID: 625716880}
   ChangeStateOnActivate: []
   ChangeStateOnComplete:
   - {fileID: 2093052870}
@@ -25201,134 +25198,6 @@ MonoBehaviour:
   m_Size: {x: 20, y: 20, z: 16.95}
   m_FadeFactor: 1
   m_Version: 2
---- !u!1 &625716879
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 625716881}
-  - component: {fileID: 625716880}
-  m_Layer: 0
-  m_Name: GlobalAS
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!82 &625716880
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 625716879}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: f75d0ba6d624ca743a8d2a93cfd94be0, type: 2}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 100
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 1
-  BypassListenerEffects: 0
-  BypassReverbZones: 1
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!4 &625716881
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 625716879}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 140.1145, y: -45.552265, z: 149.18521}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &626595957
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35382,29 +35251,19 @@ MonoBehaviour:
   ProjectileDefault: {fileID: 5685620175524415770, guid: a9c5326ad20cbb949a52585587b7d787, type: 3}
   ResourcePointMaster: {fileID: 0}
   DefaultObjectModel: {fileID: 2180419389044982337, guid: 2ac1eac07edb8c641ba3f405e521881e, type: 3}
-  CombatManager: {fileID: 1500188127}
-  GlobalVoicePlayer: {fileID: 625716879}
-  PickRaceManager: {fileID: 1530300700}
   RevivalCapturePoint: {fileID: 1326751038015497145, guid: d59df831451d1fa40985c2486243e366, type: 3}
   EUS_UI_CurrentlySelectedParent: {fileID: 1559954685}
   SpeechCutsceneBubbleCanvas: {fileID: 1643042039}
   SpeechCutsceneBubble: {fileID: 1643042039}
-  DEM: {fileID: 891148060}
   MenuCanvas: {fileID: 903591300}
-  AllJumpBlockers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   AllPlayers: []
   AllPlayers_SM: []
   DefaultMMDot: {fileID: 21300000, guid: cfdd29fa731fb9c41b157348938ea7ef, type: 3}
-  CamFade: {fileID: 1926892429}
   AI_CriticalDefencePoints:
   - {fileID: 1231442573}
   - {fileID: 393238556}
   - {fileID: 1781833966}
   MaxSquadsToDefendCrits: 010000000100000001000000
-  LootManagerGlobal: {fileID: 0}
   HPRegenLuxCoverPos: 0
   HPDegenLuxCoverPos: 1
   AccuracyBonusLuxCoverPos: 2
@@ -35983,13 +35842,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e293d0253a038ba48bb4308dd7f03ffa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EntityHolder: []
-  DeathExplosionsToSpawn: []
-  CurrentDeathExplosionTimers: []
-  DeathExplosionIsTimed: 
-  DeathExplosionName: []
-  DestroyModOnActivate: 
-  TickRate: 0.15
 --- !u!82 &891148061
 AudioSource:
   m_ObjectHideFlags: 0
@@ -36366,6 +36218,7 @@ Transform:
   - {fileID: 1500188128}
   - {fileID: 2052499354}
   - {fileID: 1717591222}
+  - {fileID: 1669222450}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &903591299
@@ -50038,8 +49891,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5ab3b4419c0e204caf1cfbef45725b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitialFadeDelayTime: 0
-  TimeToMove: 4
   IsMovingBetweenStates: 0
 --- !u!114 &1176517485
 MonoBehaviour:
@@ -55361,7 +55212,6 @@ MonoBehaviour:
   SpeechScript:
   - Rally and advance! The Necromancer must be brought down this day!
   PlayOnStart: 1
-  AS: {fileID: 625716880}
   ChangeStateOnActivate: []
   ChangeStateOnComplete:
   - {fileID: 1102684874}
@@ -62972,11 +62822,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f2643422b3f71024cb08b07101e93fdb, type: 3}
   m_PrefabInstance: {fileID: 1529836647}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1530300700 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5860969691552258955, guid: 9cd66bb47d055e246841a4f68c767f52, type: 3}
-  m_PrefabInstance: {fileID: 2146792352}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1531074799 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2494451231115964285, guid: 271703dc63799934195271517200330c, type: 3}
@@ -66060,7 +65905,6 @@ MonoBehaviour:
     Once more he will be cast aside.
   - "Champion\u2026 It is an honour\u2026"
   PlayOnStart: 1
-  AS: {fileID: 625716880}
   ChangeStateOnActivate: []
   ChangeStateOnComplete: []
   CreateObjectiveOnStart: 
@@ -68206,6 +68050,100 @@ VisualEffect:
         m_Overridden: 1
     m_Bool:
       m_Array: []
+--- !u!1001 &1669222449
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 901840409}
+    m_Modifications:
+    - target: {fileID: 959787483301194987, guid: c2325d6d786d653478aeab49eb6ebb01, type: 3}
+      propertyPath: m_Name
+      value: GlobalVoicePlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411058000620402008, guid: c2325d6d786d653478aeab49eb6ebb01, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411058000620402008, guid: c2325d6d786d653478aeab49eb6ebb01, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411058000620402008, guid: c2325d6d786d653478aeab49eb6ebb01, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411058000620402008, guid: c2325d6d786d653478aeab49eb6ebb01, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411058000620402008, guid: c2325d6d786d653478aeab49eb6ebb01, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411058000620402008, guid: c2325d6d786d653478aeab49eb6ebb01, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411058000620402008, guid: c2325d6d786d653478aeab49eb6ebb01, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411058000620402008, guid: c2325d6d786d653478aeab49eb6ebb01, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165698450891240276, guid: c2325d6d786d653478aeab49eb6ebb01, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165698450891240276, guid: c2325d6d786d653478aeab49eb6ebb01, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165698450891240276, guid: c2325d6d786d653478aeab49eb6ebb01, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165698450891240276, guid: c2325d6d786d653478aeab49eb6ebb01, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165698450891240276, guid: c2325d6d786d653478aeab49eb6ebb01, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165698450891240276, guid: c2325d6d786d653478aeab49eb6ebb01, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165698450891240276, guid: c2325d6d786d653478aeab49eb6ebb01, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165698450891240276, guid: c2325d6d786d653478aeab49eb6ebb01, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165698450891240276, guid: c2325d6d786d653478aeab49eb6ebb01, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165698450891240276, guid: c2325d6d786d653478aeab49eb6ebb01, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c2325d6d786d653478aeab49eb6ebb01, type: 3}
+--- !u!4 &1669222450 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5165698450891240276, guid: c2325d6d786d653478aeab49eb6ebb01, type: 3}
+  m_PrefabInstance: {fileID: 1669222449}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1672883460
 GameObject:
   m_ObjectHideFlags: 0
@@ -68715,8 +68653,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5ab3b4419c0e204caf1cfbef45725b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitialFadeDelayTime: 0
-  TimeToMove: 2
   IsMovingBetweenStates: 1
 --- !u!114 &1685275258
 MonoBehaviour:
@@ -78000,8 +77936,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5ab3b4419c0e204caf1cfbef45725b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitialFadeDelayTime: 6
-  TimeToMove: 4
   IsMovingBetweenStates: 0
 --- !u!114 &1926892430
 MonoBehaviour:
@@ -80371,7 +80305,6 @@ MonoBehaviour:
   - We strike now at Hell itself, we strike to slay The Necromancer, and we STRIKE
     TO SAVE HUMANITY!
   PlayOnStart: 1
-  AS: {fileID: 625716880}
   ChangeStateOnActivate: []
   ChangeStateOnComplete:
   - {fileID: 301326489}
@@ -87104,7 +87037,6 @@ SceneRoots:
   - {fileID: 249525600}
   - {fileID: 1019988209}
   - {fileID: 145391319}
-  - {fileID: 625716881}
   - {fileID: 1326383150}
   - {fileID: 1389321662}
   - {fileID: 1756072773}

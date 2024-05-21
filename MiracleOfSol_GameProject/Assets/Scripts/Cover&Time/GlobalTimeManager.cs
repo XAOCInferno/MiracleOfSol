@@ -60,8 +60,6 @@ public class GlobalTimeManager : MonoBehaviour
     private bool IsDay = true;
     private float TimeAsPercent;
     private GameInfo GI;
-    private AudioSource GlobalVoiceAS;
-    private MusicManager GlobalMM;
     //private UnityEngine.Rendering.HighDefinition.Fog CurrentFog;
 
 
@@ -72,8 +70,6 @@ public class GlobalTimeManager : MonoBehaviour
         AllQuotes = new AudioClip[4][] { SunQuotes, FullMoonQuotes, MoonQuotes, BloodMoonQuotes };
 
         gameObject.TryGetComponent(out GI);
-        GI.GlobalVoicePlayer.TryGetComponent(out GlobalVoiceAS);
-        GI.GlobalVoicePlayer.TryGetComponent(out GlobalMM);
 
         if (NightTime < DayTime) { NightTime *= -1; }
         if (IsDay) { CurrentTime = DayTime; } else { CurrentTime = NightTime; }
@@ -273,24 +269,17 @@ public class GlobalTimeManager : MonoBehaviour
         {
             PreviousCelestialType = CelestialType;
 
-            if (GlobalMM != null)
+            if (!GI.IsInCutscene)
             {
-                if (!GI.IsInCutscene)
+                GlobalVoicePlayer.StopPlaying();
+                if (!MusicManager.Instance.IsInBoss)
                 {
-                    GlobalVoiceAS.Stop();
-                    if (!GlobalMM.IsInBoss)
-                    {
-                        GlobalVoiceAS.PlayOneShot(AllQuotes[CelestialType][Random.Range(0, AllQuotes[CelestialType].Length)]);
-                    }
-                    else
-                    {
-                        GlobalVoiceAS.PlayOneShot(InBossSpecialQuotes_All[CelestialType][Random.Range(0, InBossSpecialQuotes_All[CelestialType].Length)]);
-                    }
+                    GlobalVoicePlayer.PlayVoiceLine(AllQuotes[CelestialType][Random.Range(0, AllQuotes[CelestialType].Length)]);
                 }
-            }
-            else
-            {
-                GI.TryGetComponent(out GlobalMM);
+                else
+                {
+                    GlobalVoicePlayer.PlayVoiceLine(InBossSpecialQuotes_All[CelestialType][Random.Range(0, InBossSpecialQuotes_All[CelestialType].Length)]);
+                }
             }
         }
     }

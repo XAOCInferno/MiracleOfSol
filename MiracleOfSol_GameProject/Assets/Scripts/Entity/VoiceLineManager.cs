@@ -33,20 +33,17 @@ public class VoiceLineManager : MonoBehaviour
     private float CurrentDelayBetweenLines = 0;
     private bool CanPlayLines = true;
 
-    private AudioSource GlobalVoiceAS;
     private AudioClip[][] AllSpecialReviveTargetLines;
     private AudioClip[][] AllSpecialRevivedByLines;
 
+    private AudioSource LocalAudioSource;
+
     private void Start()
     {
-        if (ASPrefab == null) 
-        { 
-            GameObject.FindGameObjectWithTag("GameController").TryGetComponent(out GameInfo tmpGI);
-            tmpGI.GlobalVoicePlayer.TryGetComponent(out GlobalVoiceAS);
-        }
-        else 
+        if (ASPrefab != null)
         {
             GameObject tmpAS = Instantiate(ASPrefab);
+            tmpAS.TryGetComponent(out LocalAudioSource);
             tmpAS.transform.position = transform.position;
             AutoFollowObject tmpAS_AF = tmpAS.AddComponent<AutoFollowObject>();
 
@@ -54,17 +51,16 @@ public class VoiceLineManager : MonoBehaviour
             tmpAS_AF.Vel = 100;
             tmpAS_AF.DestroyOnObjDestroy = true;
             tmpAS_AF.DelayedDeathTime = 8;
-
-            tmpAS.TryGetComponent(out GlobalVoiceAS);
         }
 
-        AllSpecialReviveTargetLines = new AudioClip[4][] { ReviveTarget_LeaderLines, ReviveTarget_PriestLines,  ReviveTarget_WizardLines, ReviveTarget_SpecialistLines };
+
+        AllSpecialReviveTargetLines = new AudioClip[4][] { ReviveTarget_LeaderLines, ReviveTarget_PriestLines, ReviveTarget_WizardLines, ReviveTarget_SpecialistLines };
         AllSpecialRevivedByLines = new AudioClip[5][] { Revived_ByLeaderLines, Revived_ByPriestLines, Revived_ByWizardLines, Revived_BySpecialistLines, Revived_ByAngelLines };
     }
 
     private void Update()
     {
-        if(!CanPlayLines && !GetIfPlaying())
+        if(!CanPlayLines && !GlobalVoicePlayer.GetIfPlaying())
         {
             CurrentDelayBetweenLines += Time.deltaTime;
             if(CurrentDelayBetweenLines >= CurrentDesiredTimeBetweenLines)
@@ -74,18 +70,23 @@ public class VoiceLineManager : MonoBehaviour
         }
     }
 
-    public bool GetIfPlaying()
-    {
-        return GlobalVoiceAS.isPlaying;
-    }
-
-    public void PlaySpecificVoiceLine(AudioClip Line, bool ForcePlayLine = false)
+    public void PlaySpecificVoiceLine(AudioClip Line, bool ForcePlayLine = false, bool Local = true)
     {
         try
         {
-            if ((!GlobalVoiceAS.isPlaying || ForcePlayLine) && Line != null && CanPlayLines)
+            if(Local && LocalAudioSource != null) 
             {
-                GlobalVoiceAS.PlayOneShot(Line);
+                if(((!GlobalVoicePlayer.GetIfPlaying() && !LocalAudioSource.isPlaying) || ForcePlayLine) && Line != null && CanPlayLines)
+                {
+                    LocalAudioSource.Stop();
+                    LocalAudioSource.PlayOneShot(Line);
+                    CurrentDesiredTimeBetweenLines = Random.Range(MinDelayBetweenLines, MaxDelayBetweenLines);
+                    CanPlayLines = false;
+                }
+            }
+            else if ((!GlobalVoicePlayer.GetIfPlaying() || ForcePlayLine) && Line != null && CanPlayLines)
+            {
+                GlobalVoicePlayer.PlayVoiceLine(Line);
                 CurrentDesiredTimeBetweenLines = Random.Range(MinDelayBetweenLines, MaxDelayBetweenLines);
                 CanPlayLines = false;
             }
@@ -99,14 +100,14 @@ public class VoiceLineManager : MonoBehaviour
     public void PlayVoiceLineOfType(string Type)
     {
         Type = Type.ToUpper();
-        if(Type == "MOVE") { PlaySpecificVoiceLine(GetLineFromArray(MovementLines)); }
-        else if (Type == "ATTACK") { PlaySpecificVoiceLine(GetLineFromArray(AttackLines)); }
-        else if (Type == "CAPTURE") { PlaySpecificVoiceLine(GetLineFromArray(CaptureLines)); }
-        else if (Type == "CAPTURE_COMPLETE") { PlaySpecificVoiceLine(GetLineFromArray(CaptureCompleteLines)); }
-        else if (Type == "STOP") { PlaySpecificVoiceLine(GetLineFromArray(StoppingLines)); }
-        else if (Type == "SELECTION") { PlaySpecificVoiceLine(GetLineFromArray(SelectionLines)); }
-        else if (Type == "DIE") { PlaySpecificVoiceLine(GetLineFromArray(DieLines), true); }
-        else if (Type == "LEVELUP") { PlaySpecificVoiceLine(GetLineFromArray(LevelUpLines), true); }
+        if(Type == "MOVE") { PlaySpecificVoiceLine(GetLineFromArray(MovementLines),false, true); }
+        else if (Type == "ATTACK") { PlaySpecificVoiceLine(GetLineFromArray(AttackLines), false, true); }
+        else if (Type == "CAPTURE") { PlaySpecificVoiceLine(GetLineFromArray(CaptureLines), false, true); }
+        else if (Type == "CAPTURE_COMPLETE") { PlaySpecificVoiceLine(GetLineFromArray(CaptureCompleteLines), false, true); }
+        else if (Type == "STOP") { PlaySpecificVoiceLine(GetLineFromArray(StoppingLines), false, true); }
+        else if (Type == "SELECTION") { PlaySpecificVoiceLine(GetLineFromArray(SelectionLines), false, true); }
+        else if (Type == "DIE") { PlaySpecificVoiceLine(GetLineFromArray(DieLines), true, true); }
+        else if (Type == "LEVELUP") { PlaySpecificVoiceLine(GetLineFromArray(LevelUpLines), true, true); }
         else { Debug.LogWarning("WARNING: Attempted to play voice line '" + Type + "'. This is an unknown Type! EntityName: " + gameObject.name); }
     }
 
@@ -114,11 +115,11 @@ public class VoiceLineManager : MonoBehaviour
     {
         if (AllSpecialReviveTargetLines[Target].Length > 0)
         {
-            PlaySpecificVoiceLine(GetLineFromArray(AllSpecialReviveTargetLines[Target]));
+            PlaySpecificVoiceLine(GetLineFromArray(AllSpecialReviveTargetLines[Target]), false, true);
         }
         else
         {
-            PlaySpecificVoiceLine(GetLineFromArray(ReviveTargetSharedLines));
+            PlaySpecificVoiceLine(GetLineFromArray(ReviveTargetSharedLines), false, true);
         }
     }
 
@@ -126,11 +127,11 @@ public class VoiceLineManager : MonoBehaviour
     {
         if (AllSpecialRevivedByLines[Target].Length > 0)
         {
-            PlaySpecificVoiceLine(GetLineFromArray(AllSpecialRevivedByLines[Target]));
+            PlaySpecificVoiceLine(GetLineFromArray(AllSpecialRevivedByLines[Target]), false, true);
         }
         else
         {
-            PlaySpecificVoiceLine(GetLineFromArray(Revived_SharedLines));
+            PlaySpecificVoiceLine(GetLineFromArray(Revived_SharedLines), false, true);
         }
     }
 
