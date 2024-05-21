@@ -88,7 +88,11 @@ public class VideoCutscene : MonoBehaviour
         else if (WaitingForCutsceneFade && !DelayedIsPlaying)
         {
             DelayedIsPlaying = true;
-            if (!GI.CamFade.IsMovingBetweenStates) { Invoke(nameof(DelayedInitCutscene), InitialDelayTime); GI.CamFade.gameObject.SetActive(false); }
+            if (!CameraFade.Instance.IsMovingBetweenStates) 
+            { 
+                Invoke(nameof(DelayedInitCutscene), InitialDelayTime); 
+                CameraFade.Instance.gameObject.SetActive(false); 
+            }
         }
     }
 
@@ -96,7 +100,7 @@ public class VideoCutscene : MonoBehaviour
     {
         if (!HasDoneDelayedInit)
         {
-            GI.CamFade.gameObject.SetActive(false);
+            CameraFade.Instance.gameObject.SetActive(false);
             HasDoneDelayedInit = true;
             WaitingForCutsceneFade = false;
 

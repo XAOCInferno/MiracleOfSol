@@ -32,7 +32,6 @@ public class GameInfo : MonoBehaviour
     public List<GameObject> AllPlayers = new List<GameObject>();
     public List<SquadManager> AllPlayers_SM = new List<SquadManager>();
     public Sprite DefaultMMDot;
-    public CameraFade CamFade;
     public Transform[] AI_CriticalDefencePoints;
     public List<int> MaxSquadsToDefendCrits;
 
@@ -208,7 +207,7 @@ public class GameInfo : MonoBehaviour
 
     public void EnableCutsceneLogic(bool IsIntroCutscene = false)
     {
-        CamFade.ChangeState(true, true);
+        CameraFade.ChangeState(true, true);
         if (IsIntroCutscene) { ChangeGameplayState(false); }
     }
 
@@ -222,9 +221,9 @@ public class GameInfo : MonoBehaviour
 
     private void CheckForFadeToBlackComplete()
     {
-        if (!CamFade.IsMovingBetweenStates)
+        if (!CameraFade.Instance.IsMovingBetweenStates)
         {
-            CamFade.ForceChangeColours(new Color(255,255,255),true);
+            CameraFade.ForceChangeColours(new Color(255,255,255),true);
             ChangeGameplayState(false);
         }
     }
@@ -233,11 +232,11 @@ public class GameInfo : MonoBehaviour
     {
         if (!CleanGoIntoCamera)
         {
-            CamFade.ChangeState(true, false);
+            CameraFade.ChangeState(true, false);
         }
         else
         {
-            CamFade.ForceChangeColours(new Color(0, 0, 0, 0), false);
+            CameraFade.ForceChangeColours(new Color(0, 0, 0, 0), false);
         }
 
         ChangeGameplayState(true);

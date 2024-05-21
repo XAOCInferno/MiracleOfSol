@@ -5,22 +5,37 @@ using UnityEngine.UI;
 
 public class CameraFade : MonoBehaviour
 {
-    public float InitialFadeDelayTime = 4;
-    public float TimeToMove = 4;
+    private static CameraFade _instance;
+    public static CameraFade Instance { get { return _instance; } }
+
+    private float InitialFadeDelayTime = 4;
+    private float TimeToMove = 4;
     public bool IsMovingBetweenStates = false;
 
     private bool State = true;
     private Image selfImage;
-    private Color DesiredColour;
+    private  Color DesiredColour;
     private Color PreviousColour;
     private float CurrentTime;
     private bool LogicSetup = false;
     private float TimerInitialDelayTime = 0;
     private bool IsCheckingForInitialDelayTime = true;
 
-    private void Start()
+    private void Awake()
     {
-        if (!LogicSetup) { SetupLogic(); }
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            _instance = this;
+        }
+    }
+
+    private void OnEnable()
+    {
+        SetupLogic();
     }
 
     private void SetupLogic()
@@ -54,32 +69,47 @@ public class CameraFade : MonoBehaviour
         }
     }
 
-    public void ChangeState(bool ForceState = false, bool NewState = false)
+    public static void ChangeState(bool ForceState = false, bool NewState = false, float _InitialFadeDelayTime = 6, float _TimeToMove = 4)
     {
-        if (TimerInitialDelayTime < InitialFadeDelayTime)
+        _instance.InitialFadeDelayTime = _InitialFadeDelayTime;
+        _instance.TimeToMove = _TimeToMove;
+
+        if (_instance.TimerInitialDelayTime < _instance.InitialFadeDelayTime)
         {
-            IsCheckingForInitialDelayTime = true;
+            _instance.IsCheckingForInitialDelayTime = true;
         }
         else
         {
-            if (selfImage == null)
+
+            _instance.PreviousColour = _instance.selfImage.color;
+            _instance.IsMovingBetweenStates = true;
+            _instance.CurrentTime = 0;
+
+            if (ForceState) 
             {
-                SetupLogic();
+                _instance.State = NewState; 
+            } 
+            else 
+            {
+                _instance.State = !_instance.State; 
             }
 
-            PreviousColour = selfImage.color;
-            IsMovingBetweenStates = true;
-            CurrentTime = 0;
-            if (ForceState) { State = NewState; } else { State = !State; }
-            if (State) { DesiredColour = new Color(0, 0, 0, 1); } else { DesiredColour = new Color(0, 0, 0, 0); }
+            if (_instance.State) 
+            {
+                _instance.DesiredColour = new Color(0, 0, 0, 1); 
+            } 
+            else 
+            {
+                _instance.DesiredColour = new Color(0, 0, 0, 0); 
+            }
         }
     }
 
-    public void ForceChangeColours(Color tmpDesiredColour, bool tmpState)
+    public static void ForceChangeColours(Color tmpDesiredColour, bool tmpState)
     {
-        DesiredColour = tmpDesiredColour;
-        selfImage.color = tmpDesiredColour;
-        State = tmpState;
-        IsMovingBetweenStates = false;
+        _instance.DesiredColour = tmpDesiredColour;
+        _instance.selfImage.color = tmpDesiredColour;
+        _instance.State = tmpState;
+        _instance.IsMovingBetweenStates = false;
     }
 }
