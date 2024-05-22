@@ -99,6 +99,8 @@ public static class Actions
 
     public static Action<CircularVisionEmitter> OnDrawVisionCircle; //CircularVisionEmitter: Information about who, where and radius of the vision 
     public static Action OnDemandFogRedraw;
+    public static Action<HideInFogEntity> OnRegisterHideInFogEntity; //HideInFogEntity: Structure that stores entity information to be hidden
+    public static Action<HideInFogEntity> OnDeRegisterHideInFogEntity; //HideInFogEntity: Structure that stores entity information to be hidden
 
 
     //////

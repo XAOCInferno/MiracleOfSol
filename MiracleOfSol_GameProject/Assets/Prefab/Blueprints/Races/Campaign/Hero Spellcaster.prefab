@@ -1931,7 +1931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15365ece7b624a44a815526a307d393a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VisionRadius: 15
+  VisionRadius: 25
 --- !u!1 &6615250963043405061
 GameObject:
   m_ObjectHideFlags: 0

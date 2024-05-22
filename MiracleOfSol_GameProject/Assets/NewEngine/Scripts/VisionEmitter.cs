@@ -16,6 +16,18 @@ public struct CircularVisionEmitter
     }
 }
 
+public struct HideInFogEntity
+{
+    public Transform EntityTransform;
+    public HideInFog HideController;
+
+    public HideInFogEntity(Transform _entityTransform, HideInFog _hideController)
+    {
+        EntityTransform = _entityTransform;
+        HideController = _hideController;
+    }
+}
+
 public class VisionEmitter : CachedObject
 {
     [SerializeField] private int VisionRadius = 10;

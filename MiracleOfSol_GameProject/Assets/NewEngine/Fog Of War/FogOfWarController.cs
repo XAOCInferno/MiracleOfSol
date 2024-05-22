@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 using UnityEngine.Rendering.HighDefinition;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class FogOfWarController : MonoBehaviour
 {
@@ -16,6 +16,8 @@ public class FogOfWarController : MonoBehaviour
 
     private bool MustUpdateTextureThisFrame = false;
 
+    private Dictionary<Transform, HideInFog> AllHideInFogEntities = new();
+
     private void OnEnable()
     {
         FogAsByteArray = new byte[WIDTH, HEIGHT];
@@ -25,12 +27,16 @@ public class FogOfWarController : MonoBehaviour
 
         Actions.OnDrawVisionCircle += DrawCircleCutout;
         Actions.OnDemandFogRedraw += DemandFogUpdate;
+        Actions.OnRegisterHideInFogEntity += RegisterHideInFogEntity;
+        Actions.OnDeRegisterHideInFogEntity += DeRegisterHideInFogEntity;
     }
 
     private void OnDisable()
     {
         Actions.OnDrawVisionCircle -= DrawCircleCutout;
         Actions.OnDemandFogRedraw -= DemandFogUpdate;
+        Actions.OnRegisterHideInFogEntity -= RegisterHideInFogEntity;
+        Actions.OnDeRegisterHideInFogEntity -= DeRegisterHideInFogEntity;
     }
 
     private void Start()
@@ -63,6 +69,7 @@ public class FogOfWarController : MonoBehaviour
             MustUpdateTextureThisFrame = false;
 
             DisplayFogData();
+            GetEntitiesInVision();
 
         }
 
@@ -114,46 +121,94 @@ public class FogOfWarController : MonoBehaviour
 
         Vector2Int Centre = VisionInfo.Centre;
         int Radius = VisionInfo.Radius;
+        double rad2 = System.Math.Pow(Radius, 2);
 
         for (int x = Centre.x - Radius; x <= Centre.x; x++)
         {
             for (int y = Centre.y - Radius; y <= Centre.y; y++)
             {
-                // we don't have to take the square root, it's slow
-                if ((x - Centre.x) * (x - Centre.x) + (y - Centre.y) * (y - Centre.y) <= Radius * Radius)
+                if (System.Math.Pow(x - Centre.x, 2) + System.Math.Pow(y - Centre.y, 2) <= rad2)
                 {
                     int xSym = Centre.x - (x - Centre.x);
                     int ySym = Centre.y - (y - Centre.y);
 
-                    if (x >= 0 && x < WIDTH)
-                    {
-                        if (y >= 0 && y < HEIGHT)
-                        {
-                            FogAsByteArray[x, y] = 0;
-                        }
+                    Vector2Int CoordXY = PointToBytePosition(new(x, y));
+                    Vector2Int CoordXYSym = PointToBytePosition(new(xSym, ySym));
+                    Vector2Int CoordXSymYSym = PointToBytePosition(new(x, ySym));
+                    Vector2Int CoordXSymY = PointToBytePosition(new(xSym, y));
 
-                        if (ySym >= 0 && ySym < HEIGHT)
-                        {
-                            FogAsByteArray[x, ySym] = 0;
-                        }
-                    }
-
-                    if (xSym >= 0 && xSym < WIDTH)
-                    {
-                        if (ySym >= 0 && ySym < HEIGHT)
-                        {
-                            FogAsByteArray[xSym, ySym] = 0;
-                        }
-
-                        if (y >= 0 && y < HEIGHT)
-                        {
-                            FogAsByteArray[xSym, y] = 0;
-                        }
-                    }
+                    FogAsByteArray[CoordXY.x, CoordXY.y] = 0;
+                    FogAsByteArray[CoordXYSym.x, CoordXYSym.y] = 0;
+                    FogAsByteArray[CoordXSymYSym.x, CoordXSymYSym.y] = 0;
+                    FogAsByteArray[CoordXSymY.x, CoordXSymY.y] = 0;
+                    
                 }
             }
         }
+    }
+
+    private Vector2Int PointToBytePosition(Vector2Int point)
+    {
+        Vector2Int bytePosition = new(0, 0);
+
+        if (point.x >= 0 && point.x < WIDTH)
+        {
+            if (point.y >= 0 && point.y < HEIGHT)
+            {
+                bytePosition.x = point.x;
+                bytePosition.y = point.y;
+            }
+        }
+
+        return bytePosition;
 
     }
+
+    private Vector2Int WorldPositionToBytePosition(Vector3 worldPosition)
+    {
+        return PointToBytePosition(new((int)worldPosition.x, (int)worldPosition.z));
+    }
+
+    private void GetEntitiesInVision()
+    {
+        foreach(KeyValuePair<Transform, HideInFog> keyValuePair in AllHideInFogEntities)
+        {
+            keyValuePair.Value.SetArtView(GetIfInVision(keyValuePair.Key.transform.position));
+        }
+    }
+
+    private bool GetIfInVision(Vector3 Position)
+    {
+
+        Vector2Int bytePosition = WorldPositionToBytePosition(Position);
+
+        return FogAsByteArray[bytePosition.x, bytePosition.y] == 0;
+
+    }
+
+    private void RegisterHideInFogEntity(HideInFogEntity EntityStruct)
+    {
+        try
+        {
+            AllHideInFogEntities.Add(EntityStruct.EntityTransform, EntityStruct.HideController);
+        }
+        catch
+        {
+            Dbg.Log("Cannot add Hide In Fog entity, likely null.", eLogType.Warning, null);
+        }
+    }
+
+    private void DeRegisterHideInFogEntity(HideInFogEntity EntityStruct)
+    {
+        try
+        {
+            AllHideInFogEntities.Remove(EntityStruct.EntityTransform);
+        }
+        catch
+        {
+            Dbg.Log("Cannot remove Hide In Fog entity, likely null.", eLogType.Warning, null);
+        }
+    }
+
 
 }

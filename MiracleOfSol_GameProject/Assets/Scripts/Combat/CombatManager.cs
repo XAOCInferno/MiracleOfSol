@@ -219,7 +219,7 @@ public class CombatManager : MonoBehaviour
                                             if ((Vector3.Distance(AllSquads_Positions[(int)tmp_ID[0]][(int)tmp_ID[1]], AllSquads_Positions[(int)tmp_eID[0]][(int)tmp_eID[1]]) <= tmp_Combat.AggroRange) || AI_Aggression == eAIAggressionTypes.FullOnAggression)
                                             {
                                                 if (!AllSquads_Health[(int)tmp_eID[0]][(int)tmp_eID[1]].GetIfIncapacitated())
-                                                {
+                                                { 
                                                     tmpEnemyInArea.Add(AllSquads[(int)tmp_eID[0]][(int)tmp_eID[1]].transform);
                                                 }
                                             }
